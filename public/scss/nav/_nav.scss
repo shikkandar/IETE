@@ -1,0 +1,159 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+body{
+  min-height: 100vh;
+}
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  background-color: #2A7593;
+  opacity: 1;
+  padding: 10px 20px 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 1;
+  /* height: 80px; */
+}
+.navbar.hide {
+  top: -100px;
+  opacity: 0;
+}
+
+.navbar.top {
+  // background: rgb(202, 225, 224);
+  // background: linear-gradient(94deg, rgba(202, 225, 224, 1) 0%, rgba(5, 58, 117, 1) 34%);
+  background-color: #fff;
+  color: black;
+}
+.navbar nav ul{
+  list-style-type: none;
+}
+.navbar nav ul li{
+  position: relative;
+  float: left;
+  padding: 15px;
+}
+.navbar nav ul li a{
+  padding: 5px;
+  display: block;
+  color: black;
+}
+.navbar nav ul li a:hover{
+  border-bottom: 1px solid black;
+  
+}
+.navbar nav ul li ul{
+  position: absolute;
+  left: 0;
+  width: 200px;
+  background: #fff;
+  display: none;
+}
+.navbar nav ul li .others{
+  position: absolute;
+  left: -100px;
+  width: 200px;
+  background: #fff;
+  display: none;
+}
+.navbar nav ul li ul li{
+ width: 100%;
+ border-top:1px solid rgba(0, 0, 0, 0.1) ;
+}
+.navbar nav ul li ul li a:hover{
+border-bottom: none;
+}
+.navbar nav ul li ul li a{
+  color: #333;
+}
+.navbar nav ul li ul li ul{
+ left:200px ;
+ top: 0;
+}
+.navbar nav ul li ul li .Comitee{
+ left:200px ;
+ top: 0;
+ width: 250px;
+}
+.navbar nav ul li ul li .departement{
+ left:-400px ;
+ top: 0;
+ width: 400px;
+}
+.navbar nav ul li:focus-within >ul,
+.navbar nav ul li:hover >ul{
+  display: initial;
+}
+#menu-bar{
+display: none;
+}
+.navbar label {
+font-size: 30px;
+cursor: pointer;
+color: #333;
+display: none;
+}
+@media (max-width: 1100px){
+  .navbar{
+    padding: 20px;
+  }
+  .navbar label  {
+    display: initial;
+  }
+  .navbar nav {
+    position: fixed;
+    width: 100%;
+
+    background: #fff;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  .navbar nav ul li{
+    width: 100%;
+    
+  }
+  .navbar nav ul li ul{
+    position: relative;
+    width: 100%;
+  }
+  .navbar nav ul li ul li{
+    background: #eee;
+  }
+  .navbar nav ul li ul li ul{
+    left: 0;
+    width: 100%;
+  }
+  #menu-bar:checked ~ nav{
+    display: initial;
+    left: 0;
+  }
+  .navbar nav ul li ul li .Comitee{
+    left: 0;
+    width: 200px;
+    background-color: #2A7593;
+ }
+ .navbar nav ul li ul li .departement{
+    left: 0;
+    width: 100%;
+ }
+
+ .navbar nav ul li .others{
+     left:0px;
+     width:100%;
+   }
+   
+}

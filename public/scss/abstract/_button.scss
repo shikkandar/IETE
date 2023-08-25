@@ -1,0 +1,173 @@
+@use "../abstract/color" as *;
+.placement-btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: $form-blue;
+    font-family: $primary-text;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border: none;
+  
+   }
+   
+   .placement-btn:after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: $primary-text-color-hover;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+   }
+   
+   .placement-btn:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+   }
+   
+   .placement-btn .read-more {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 12px 15px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+   }
+   .placement-btn a{
+    color: #fff;
+   }
+   .placement-btnn:hover .read-more{
+    color: #183153;
+    animation: scaleUp 0.3s ease-in-out;
+   }
+   
+   @keyframes scaleUp {
+    0% {
+     transform: scale(1);
+    }
+   
+    50% {
+     transform: scale(0.95);
+    }
+   
+    100% {
+     transform: scale(1);
+    }
+   }
+   
+   /*apply btn*/
+   /* From uiverse.io by @Ali-Tahmazi99 */
+.apply-btn{
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #03045e;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+   }
+   
+   .apply-btn::before,
+   .apply-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skew(15deg);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: -1;
+   }
+   
+   .apply-btn::before {
+    left: -10px;
+    background: $primary-text-color;
+   }
+   
+   .apply-btn::after {
+    right: -10px;
+    background: $primary-text-color-hover;
+   }
+   
+   .apply-btn:hover::before,
+   .apply-btn:hover::after {
+    width: 58%;
+   }
+   
+   .apply-btn:hover .apply-add{
+    color: #fff;
+    transition: 0.3s;
+   }
+   
+   
+   .apply-btn .apply-add {
+    color: #03045e;
+    font-size: 18px;
+    transition: all 0.3s ease-in;
+   }
+
+   .next-page {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    background-color: #171717;
+    padding: 1em 3em;
+    border: none;
+    border-radius: .4rem;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .next-page span:not(:nth-child(6)) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 30px;
+    width: 35px;
+    background-color:$form-green;
+    border-radius: 50%;
+    transition: .6s ease;
+  }
+  
+ .next-page span:nth-child(6) {
+    position: relative;
+  }
+  
+ .next-page span:nth-child(1) {
+    transform: translate(-3.3em, -4em);
+  }
+  
+ .next-page span:nth-child(2) {
+    transform: translate(-8em, 1.3em);
+  }
+  
+ .next-page span:nth-child(3) {
+    transform: translate(-.2em, 1.8em);
+  }
+  
+ .next-page span:nth-child(4) {
+    transform: translate(3.5em, 1.4em);
+  }
+  
+ .next-page span:nth-child(5) {
+    transform: translate(3.5em, -3.8em);
+  }
+  
+ .next-page:hover span:not(:nth-child(6)) {
+    transform: translate(-50%, -50%) scale(4);
+    transition: 1.5s ease;
+  }
+    

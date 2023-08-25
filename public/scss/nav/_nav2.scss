@@ -1,0 +1,189 @@
+@use "../abstract/font" as *;
+@use "../abstract/color" as *;
+@use "../abstract/mixin.scss";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    
+    text-decoration: none;
+  }
+  body{
+    min-height: 100vh;
+  }
+
+  .navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    background: rgb(255,255,255);
+    background: linear-gradient(72deg, rgba(255,255,255,1) 0%, $form-blue 21%);
+    opacity: 1;
+    padding: 10px 20px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 1;
+    /* height: 80px; */
+  }
+  .navbar.hide {
+    top: -100px;
+    opacity: 0;
+  }
+  
+  .navbar.top {
+    background: rgb(255,255,255);
+    background: linear-gradient(72deg, rgba(255,255,255,1) 0%, rgba(0,31,78,1) 21%);
+    color: black;
+  }
+  .navbar nav ul{
+    list-style-type: none;
+    
+  }
+  .navbar nav ul li{
+    position: relative;
+    float: left;
+    padding: 15px;
+  }
+  .navbar nav ul li a{
+    padding: 5px;
+    display: block;
+    color:white;
+    text-transform: capitalize;
+  }
+  .navbar nav ul li a:hover{
+    border-bottom: 1px solid black;
+    
+  }
+  .navbar nav ul li ul{
+   @include mixin.drop;
+   width: 250px;
+}
+  .navbar nav ul li .others{
+    left: -100px;
+    width: 200px;
+}
+  .navbar nav ul li ul li{
+   width: 100%;
+   border-top:1px solid white ;
+   
+  }
+  .navbar nav ul li ul li a:hover{
+  border-bottom: none;
+  
+  }
+
+  .navbar nav ul li ul li ul{
+   left:230px ;
+   top: 0;
+  }
+  .navbar nav ul li ul li .Comitee{
+   left:230px;
+   top: 0;
+   width: 280px;
+  }
+  .navbar nav ul li ul li .departement{
+   left:-400px ;
+   top: 0;
+   width: 400px;
+  }
+  .navbar nav ul li ul li .other{
+   left:-250px ;
+   top: 10px;
+   width: 250px;
+  }
+  .navbar nav ul li:focus-within >ul,
+  .navbar nav ul li:hover >ul{
+    display: initial;
+  }
+  #menu-bar{
+  display: none;
+  }
+  .navbar label {
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+  display: none;
+  }
+  @media (max-width: 1100px){
+    .navbar{
+        padding: 20px;
+      }
+      .navbar label  {
+        display: initial;
+      }
+      .navbar nav {
+        position: fixed;
+        width: 100%;
+        background: #fff;
+        min-height: 100vh;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+        
+      }
+      .navbar nav ul li{
+        width: 100%;
+        padding:5px 0;
+        }
+      .navbar nav ul li a{
+        color: black;
+        }
+      .navbar nav ul li ul{
+        position: relative;
+        width: 100%;
+      }
+      .navbar nav ul li ul li{
+        background: #eee;
+      }
+      .navbar nav ul li ul li ul{
+        left: 0;
+        width: 100%;
+      }
+      #menu-bar:checked ~ nav{
+        display: initial;
+        left: 0;
+      }
+    .navbar nav ul li ul li .Comitee{
+       left: 0;
+       width: 200px;
+
+    }
+    .navbar nav ul li ul li .departement{
+       left: 0;
+       width: 100%;
+    }
+    .navbar nav ul li ul li .other{
+        left:0px ;
+        width:100%;
+       }
+    .navbar nav ul li .others{
+        left:0px;
+        width:100%;
+      }
+
+  }
+  @media (max-width:480px){
+    .navbar nav{
+        background-image:url(../img/backgrond/2713234.png);
+        background-repeat: no-repeat;
+        background-size: 450px;
+    }
+    .navbar nav ul li ul li{
+        background: none; 
+      }
+      .navbar nav ul li a:hover{
+        border-bottom: none;
+        
+      }
+      .navbar nav ul li ul li{
+        border-top:none ;
+        
+       }
+  }

@@ -2,11 +2,9 @@
 @use "../abstract/color" as *;
 @use "../abstract/mixin.scss";
 *{
-    margin: 0;
+    margin: 0px;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-    text-transform: capitalize;
     text-decoration: none;
   }
   body{
@@ -27,7 +25,7 @@
     background: rgb(245,245,245);
     background: transparent;
     opacity: 1;
-    padding: 10px 20px 10px 10px;
+    padding: 5px 20px 0px 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,7 +35,7 @@
   
   }
   .toggle-btn{
-    fill: white;
+    fill: #001F4D;
   }
   .navbar.hide {
     top: -100px;
@@ -59,7 +57,7 @@
   
   }
   .navbar nav ul li a{
-    padding: 10px 20px;
+    padding: 10px 15px ;
     display: block;
     color:white;
     font-family: 'Belanosima', sans-serif;
@@ -67,6 +65,7 @@
     font-size: 18px;
     border-bottom: 1px solid transparent;
     border-radius: 30px;
+    text-transform: capitalize;
   }
  
   .navbar nav ul li ul{
@@ -128,7 +127,7 @@
       .navbar nav {
         position: fixed;
         width: 100%;
-        background: #258965;
+        background: white;
         min-height: 100vh;
         top: 80px;
         left: -100%;
@@ -142,6 +141,7 @@
         }
       .navbar nav ul li a{
         color: black;
+        background-color: transparent;
         }
       .navbar nav ul li ul{
         position: relative;

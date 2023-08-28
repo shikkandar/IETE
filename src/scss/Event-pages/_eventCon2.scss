@@ -1,0 +1,71 @@
+@use '../abstract/color' as *;
+@use '../abstract/mixin' as *;
+.event2-con{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.event2-con1{
+    margin-top: 50px;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    row-gap:30px ;
+    background-color: rgb(244, 241, 241);
+    padding: 40px 60px;
+    border-radius: 10px;
+    font-family: $primary-text;
+    &-bold{
+        color: $primary-text-color;
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+    &-orange{
+        color: $primary-text-color-hover;
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+    &-gray{
+        color: gray;
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+    &-gray-1{
+        color: gray;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 35px;
+        text-indent: 50px;
+    }
+    &-normal{
+        font-size: 1.2rem;
+    
+    }
+   &-scope{
+        width: 100%;
+        justify-content: start;
+   }
+   &-text{
+    color: $form-blue;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    font-weight: 400;
+    font-family: $primary-text;
+   }
+}
+
+.btn-collection{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.btn-blue{
+    @include btn;   
+}
+.line{
+    width: 100%;
+    height: 1.5px;
+    background-color: gray;
+}

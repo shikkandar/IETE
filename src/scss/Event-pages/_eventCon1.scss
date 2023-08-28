@@ -1,0 +1,40 @@
+@use '../abstract/color' as *;
+@use '../abstract/mixin' as *;
+.Event-con{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Event-con1{
+    margin-top: 200px;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    row-gap:30px ;
+    background-color: rgb(244, 241, 241);
+    padding: 40px 60px;
+    border-radius: 10px;
+}
+.Event-con1-text{
+    color: $form-blue;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: $primary-text;
+}
+
+.Event-con1-text:nth-child(1){
+    color: $primary-text-color-hover;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+.Event-con1-text:nth-child(2){
+    color: gray;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.event-btn{
+   @include btn;
+}

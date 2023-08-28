@@ -1,8 +1,13 @@
 @use "../abstract/color" as *;
 footer{
     position: relative;
-    background-color: #C7CED8;
+    background-color: #080808;
     width: 100%;
+}
+a{
+    text-decoration: none;
+    color: gray;
+    font-size: 1.2rem;
 }
 .footer-con{
     position: relative;
@@ -23,7 +28,7 @@ footer{
     .address-head{
         font-family: $primary-text;
         font-size: 24px;
-        color: $primary-text-color;
+        color: #fff;
         font-weight: 600;
     }
     .address-content{
@@ -31,6 +36,7 @@ footer{
         font-weight: 400;
         margin-top: 20px;
         line-height: 40px;
+        color: gray;
     }
     .address-map{
         height: 100%;
@@ -49,7 +55,6 @@ footer{
     }
     .gmap_canvas{
         border-radius: 10px;
-        box-shadow: 2px 2px 20px rgb(189, 186, 186);
         overflow:hidden;
         background:none!important;
         width:100%;
@@ -68,6 +73,7 @@ footer{
         height: 30px;
         cursor: pointer;
         transition: width,height 0.35s ease ; 
+        fill: #fff;
 
     }
     .f-icon1:hover{

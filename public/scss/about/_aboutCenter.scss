@@ -1,0 +1,30 @@
+@use '../abstract/color' as *;
+.about-center{
+    width: 100%;
+    display: flex;
+    padding: 100px 40px;
+    justify-content: center;
+    column-gap: 50px;
+    line-height: 40px;
+    &-1{
+        width: 30%;
+    }
+    &-2{
+        @extend .about-center-1;
+    }
+    h2{
+        font-family: $primary-text;
+        color: $primary-text-color;
+        font-size: 2rem;
+    }
+    &-c{
+        font-size: 1.2rem;
+        text-indent: 50px;
+        color: gray;
+    }
+    span{
+        color: black;
+        font-family: $primary-text;
+        font-weight: 900;
+    }
+}

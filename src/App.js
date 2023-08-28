@@ -1,6 +1,6 @@
 import {Routes,Route} from 'react-router-dom';
-import About from './component/about';
-import Addmission from './component/Admission';
+import About from './component/about/about';
+import { Commitee } from './component/commitee/Commitee';
 import Academic from './component/academic';
 import Others from './component/others';
 import { Placement } from './component/placement';
@@ -36,7 +36,7 @@ function App() {
       <Routes>
       <Route path='/' element={<Home/>} />
       <Route path='/about' element={<About/>} />
-      <Route path='/ExecutiveCommittee' element={<Addmission/>} />
+      <Route path='/ExecutiveCommittee' element={<Commitee/>} />
       <Route path='/Events' element={<Academic/>} />
       <Route path='/Membership' element={<Users/>}>
         <Route path=':userId' element={<UserDetails/>}/>

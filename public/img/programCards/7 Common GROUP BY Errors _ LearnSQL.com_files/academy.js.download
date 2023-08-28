@@ -1,0 +1,648 @@
+// User's profile modal from menu
+function SimpleModal(modalEl) {
+    var self = this;
+    self.modalEl = modalEl;
+    var focusableEls = self.modalEl.querySelectorAll('a');
+    self.focusableEls = Array.prototype.slice.call(focusableEls);
+    self.firstFocusableEl = self.focusableEls[0];
+    self.lastFocusableEl = self.focusableEls[self.focusableEls.length - 1];
+    self.modalEl.addEventListener('keydown', function(e) {
+        self._handleKeyDown(e);
+    });
+}
+SimpleModal.prototype.open = function() {
+    var self = this;
+    self.modalEl.classList.add('isOpen');
+    self.modalEl.removeAttribute('aria-hidden');
+}
+SimpleModal.prototype.close = function(myProfileButton) {
+    var self = this;
+    self.modalEl.classList.remove('isOpen');
+    self.modalEl.setAttribute('aria-hidden', true);
+    myProfileButton.focus();
+}
+SimpleModal.prototype._handleKeyDown = function(e) {
+    var self = this;
+    var TAB = "Tab";
+    var ESC = "Escape";
+
+    function handleBackwardTab() {
+        if (document.activeElement === self.firstFocusableEl) {
+            e.preventDefault();
+            self.lastFocusableEl.focus();
+        }
+    }
+    function handleForwardTab() {
+        if (document.activeElement === self.lastFocusableEl) {
+            e.preventDefault();
+            self.firstFocusableEl.focus();
+        }
+    }
+    switch (e.key) {
+        case TAB:
+            if (e.shiftKey) {
+                handleBackwardTab();
+            } else {
+                handleForwardTab();
+            }
+            break;
+        case ESC:
+            self.close();
+            break;
+        default:
+            break;
+    }
+}
+SimpleModal.prototype.assignEventListeners = function(modalButton, modalLayer) {
+    var self = this;
+    modalButton.addEventListener('keydown', function(e) {
+        if (e.key === "Enter") {
+            self.open();
+        }
+    });
+    modalButton.addEventListener('click', function() {
+        self.open();
+    });
+    modalLayer.addEventListener('click', function() {
+        self.close(modalButton);
+    });
+}
+
+$(document).ready(function () {
+
+    /* Sumo click open */
+
+    document.body.addEventListener('click', function(e) {
+        var button = $(e.target).closest('.sumome-share-client-share-share');
+        if (button[0]) {
+            button.closest('.sumome-share-client-wrapper').toggleClass('sumome-share-client-wrapper--opened');
+        }
+    });
+
+    /* Hamburger menu */
+    var siteHeader = $(".site-header");
+    var siteHeaderHome = $(".siteHeaderHome");
+    var menuButton = $(".siteHeaderHome-navigation-layer-menu");
+    var hamburgerMenuWrapper = $(".siteHeaderHome-navigation-hamburger-wrapper");
+    var menuButtonCover = $(".siteHeaderHome-navigation-layer-menu-cover");
+    var menuButtonCoverActive = $(".siteHeaderHome-navigation-layer-menu-cover-active");
+    var menuHamburgerIcon = $(".siteHeaderHome-navigation-layer-menu-icon");
+    var sectionScroller = $(".section").find(".scroll-down");
+    var nextSection = $('.section-home-base').first();
+
+
+    var scroll = $(".to-top.home");
+
+    scroll.on('click', function() {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        document.querySelector('a.site-logo').focus();
+    });
+    showSectionScroller();
+
+    setupSqlLibraryModal();
+    if ($(".main-menu__item--log-in")[0]) {
+        getUserInfo();
+        showFlashSale();
+    }
+
+    menuButton.on("click", function (e) {
+        var $this = $(this);
+        e.preventDefault();
+        if ($this.hasClass("active")) {
+            hideMenuLayer();
+        } else {
+            showMenuLayer();
+        }
+    });
+
+    function showMenuLayer() {
+        menuButton.addClass("active");
+        hamburgerMenuWrapper.addClass("active");
+        hamburgerMenuWrapper.stop(true, true).slideDown();
+        menuButtonCover.hide();
+        menuButtonCoverActive.show();
+        menuHamburgerIcon.addClass("active");
+        siteHeader.addClass("active");
+        siteHeaderHome.addClass("active");
+        sectionScroller.hide();
+
+    }
+
+    function hideMenuLayer() {
+        menuButton.removeClass("active");
+        hamburgerMenuWrapper.removeClass("active");
+        menuButtonCover.show();
+        menuButtonCoverActive.hide();
+        menuHamburgerIcon.removeClass("active");
+        siteHeader.removeClass("active");
+        siteHeaderHome.removeClass("active");
+        sectionScroller.show();
+        hamburgerMenuWrapper.stop(true, true).slideUp(function () { });
+    }
+
+
+    function showSectionScroller() {
+        sectionScroller.on('click', function () {
+            $('html, body').animate({
+                scrollTop: nextSection.offset().top
+            }, 2000);
+            // scroll.fadeIn(1000);
+        });
+    }
+    $(document).scroll(function () {
+        var y = $(this).scrollTop();
+        if (y > 800) {
+            scroll.fadeIn().addClass("sticky_scroll");
+        } else {
+            scroll.fadeOut().removeClass("sticky_scroll");
+        }
+    });
+
+
+    /* layer menu */
+
+    var menuLayerItemFirst = $(".siteHeaderHome-navigation-hamburger-item.home");
+    var menuLayerItemSecond = $(".siteHeaderHome-navigation-hamburger-item.features");
+    var menuLayerItemThird = $(".siteHeaderHome-navigation-hamburger-item.pricing");
+    var menuLayerItemFourth = $(".siteHeaderHome-navigation-hamburger-item.academy");
+
+    var fala_1 = $(".fala_1");
+    var fala_2 = $(".fala_2");
+
+    var timer;
+    var delay = 100;
+
+    menuLayerItemFirst.find("a").hover(function (e) {
+        timer = setTimeout(function () {
+            menuLayerItemFirst.removeClass("animated_character_out");
+            menuLayerItemFirst.addClass("animated_character_in");
+            fala_1.addClass("animated_wave_in");
+            fala_1.removeClass("animated_wave_out");
+            fala_2.addClass("animated_wave_in");
+            fala_2.removeClass("animated_wave_out");
+        }, delay);
+    }, function (e) {
+        menuLayerItemFirst.removeClass("animated_character_in");
+        menuLayerItemFirst.addClass("animated_character_out");
+
+        clearTimeout(timer);
+    });
+
+    menuLayerItemSecond.find("a").hover(function (e) {
+        timer = setTimeout(function () {
+            menuLayerItemSecond.removeClass("animated_character_out");
+            menuLayerItemSecond.addClass("animated_character_in");
+            fala_1.addClass("animated_wave_out");
+            fala_1.removeClass("animated_wave_in");
+            fala_2.addClass("animated_wave_out");
+            fala_2.removeClass("animated_wave_in");
+        }, delay);
+    }, function (e) {
+        menuLayerItemSecond.removeClass("animated_character_in");
+        menuLayerItemSecond.addClass("animated_character_out");
+        clearTimeout(timer);
+    });
+
+    menuLayerItemThird.find("a").hover(function (e) {
+        timer = setTimeout(function () {
+            menuLayerItemThird.removeClass("animated_character_out");
+            menuLayerItemThird.addClass("animated_character_in");
+            fala_1.addClass("animated_wave_in");
+            fala_1.removeClass("animated_wave_out");
+            fala_2.addClass("animated_wave_in");
+            fala_2.removeClass("animated_wave_out");
+        }, delay);
+    }, function (e) {
+        menuLayerItemThird.removeClass("animated_character_in");
+        menuLayerItemThird.addClass("animated_character_out");
+
+        clearTimeout(timer);
+    });
+
+    menuLayerItemFourth.find("a").hover(function (e) {
+        timer = setTimeout(function () {
+            menuLayerItemFourth.removeClass("animated_character_out");
+            menuLayerItemFourth.addClass("animated_character_in");
+            fala_1.addClass("animated_wave_out");
+            fala_1.removeClass("animated_wave_in");
+            fala_2.addClass("animated_wave_out");
+            fala_2.removeClass("animated_wave_in");
+        }, delay);
+    }, function (e) {
+        menuLayerItemFourth.removeClass("animated_character_in");
+        menuLayerItemFourth.addClass("animated_character_out");
+
+        clearTimeout(timer);
+    });
+
+
+    /* menu vertical */
+
+    var navItem = $(".blog-list-nav-item");
+
+    navItem.click(function () {
+
+        navItem.removeClass("current");
+        $(this).addClass("current").show();
+        var activeTab = $(this).find("a").attr("href");
+        $(activeTab).fadeIn();
+
+        return false;
+    });
+
+    //floating social ico
+
+
+    var socialIco = $("#sticky-ico");
+
+    socialIco.sticky({
+        boundedBy: '.blog-post-main', marginTop: 250,
+        scrolled: function (status) {
+            socialIco.addClass("sticky");
+        }
+    });
+
+
+
+    var blogMenuList = $(".blog-list-nav-item");
+
+
+
+    if (window.location.href.indexOf("design_fundamentals") > -1) {
+        blogMenuList.find(".fundamentals").addClass("marked");
+    } else if (window.location.href.indexOf("design_patterns") > -1) {
+        blogMenuList.find(".patterns").addClass("marked");
+    }
+    else if (window.location.href.indexOf("example_models") > -1) {
+        blogMenuList.find(".models").addClass("marked");
+    }
+    else if (window.location.href.indexOf("database_internals") > -1) {
+        blogMenuList.find(".database").addClass("marked");
+    }
+    else if (window.location.href.indexOf("sql") > -1) {
+        blogMenuList.find(".sql").addClass("marked");
+    }
+    else if (window.location.href.indexOf("others") > -1) {
+        blogMenuList.find(".others").addClass("marked");
+    }
+    else if (window.location.href.indexOf("") > -1) {
+        blogMenuList.find(".all").addClass("marked");
+    }
+
+    if (document.querySelector(".blog-post-main-content")) {
+        $(".blog-post-main-content").progressBar();
+    }
+    if (document.querySelector(".cookbook-article")) {
+        $(".cookbook-article").progressBar();
+    }
+
+
+
+
+    function getPath() {
+        var basePath = window.location.origin || "https://learnsql.com";
+        return basePath;
+    }
+
+
+    var logoutButton = document.getElementById('layout-logout-button'),
+        hamburgerLogoutButton = document.getElementById('hamburger-logout-button');
+    function logout() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/api/v1/login/logout', true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onreadystatechange = function() {
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                window.location.reload();
+            }
+        }
+        xhr.send("{}");
+    }
+    if (logoutButton) {
+        logoutButton.addEventListener('click', logout);
+        logoutButton.addEventListener('keydown', function(e) {
+            if (e.key === "Enter") {
+                logout();
+            }
+        })
+    }
+    if (hamburgerLogoutButton) {
+        hamburgerLogoutButton.addEventListener('click', logout);
+        hamburgerLogoutButton.addEventListener('keydown', function(e) {
+            if (e.key === "Enter") {
+                logout();
+            }
+        })
+    }
+
+    var GtmHelper = {
+
+        //https://www.w3schools.com/js/js_cookies.asp
+        getCookie: function(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for(var i = 0; i <ca.length; i++) {
+              var c = ca[i];
+              while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+              }
+              if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+              }
+            }
+            return "";
+        },
+
+
+        STATUS_COOKIE: 'gdl_ugi_v3',
+
+        getStatusFromCookie() {
+            var cookie = this.getCookie(this.STATUS_COOKIE);
+            if (!cookie || cookie.length <= 0)  {
+                return null;
+            }
+            var content = atob(cookie);
+            try {
+                return JSON.parse(content)
+            } catch {
+                return nil;
+            }
+        }
+    }
+
+    function enableLoggedMenu(basePath, userName, cdnPrefix) {
+        var loginButtonsSuffix = ['--log-in', '--sign-up', '--create-free-account'];
+        var menuClass = '.main-menu__item';
+
+        // ukryj elementy związane z logowaniem - jesteśmy zalogowani
+        var logIt;
+        for (logIt = 0; logIt < loginButtonsSuffix.length; logIt++) {
+            var elementToHide = document.querySelector(menuClass + loginButtonsSuffix[logIt]);
+            if (elementToHide) {
+                elementToHide.classList.add('hide');
+            }
+        }
+
+        // odkryj elemtny służące do wylogowania
+        var logoutMenuItem = document.querySelector(menuClass + '--logout');
+        if (logoutMenuItem) {
+            logoutMenuItem.classList.remove('hide');
+        }
+
+        var showOnLoggedItems = document.querySelectorAll('.showOnLogged');
+        for (var i = 0; i < showOnLoggedItems.length; i++) {
+            showOnLoggedItems[i].classList.remove('hide');
+        }
+
+        // odkryj modal
+        var logoutModal = document.querySelector('.logout-modal');
+        if (logoutModal) {
+            logoutModal.classList.remove('hide');
+        }
+
+        var userNameFields = document.querySelectorAll('.user-name-element');
+        var fieldIt;
+        for (fieldIt = 0; fieldIt < userNameFields.length; fieldIt++) {
+            userNameFields[fieldIt].innerHTML = userName;
+        }
+
+        var userAvatar = document.querySelectorAll('.logout__avatar, .logout-modal__avatar');
+        var userIt;
+        for (userIt = 0; userIt < userAvatar.length; userIt++) {
+            userAvatar[userIt].src = cdnPrefix + '/img/user.png';
+        }
+
+
+        // dodaj klasę dla zmiany stylów
+        var mobileMenu = document.querySelector('.site-header-home-navigation-hamburger');
+        mobileMenu.classList.add('isLogged');
+
+        // ukryj przyciski login i signup
+        var hideOnLogged = document.querySelector('.hideOnLogged');
+        hideOnLogged.classList.add('hide');
+
+        setupProfileModal();
+    }
+
+    var skipNavButton = document.querySelector('#skip-navigation > button');
+    skipNavButton.addEventListener('keydown', function(e) {
+        var focusables = document.querySelector('main').querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        var firstFocusable = focusables[0];
+        if (e.key !== 'Enter') {
+            return;
+        }
+        firstFocusable.focus();
+    });
+
+    var hamburgerButton = document.querySelector('.site-header-home-navigation-layer-menu-icon'),
+        hamburgerMenu = document.querySelector('.site-header-home-navigation-hamburger-wrapper'),
+        siteLogo = document.querySelector('.site-logo');
+    hamburgerButton.addEventListener('click', function() {
+        if (Array.prototype.slice.call(hamburgerMenu.classList).includes('hide')) {
+            hamburgerMenu.classList.remove('hide');
+            siteLogo.classList.add('hide');
+        } else {
+            hamburgerMenu.classList.add('hide');
+            siteLogo.classList.remove('hide');
+        }
+    });
+
+    function setupProfileModal() {
+        var myProfileButton = document.querySelector('.main-menu__item--logout'),
+            myProfileModal = document.querySelector('.logout-modal'),
+            myProfileModalLayer = document.querySelector('.logout-modal__layer');
+        var profileModalInstance;
+
+        if (!myProfileModal || !myProfileButton) {
+            console.warn('Cannot find modal element. myProfileModal: ' + myProfileModal + ', myProfileButton: ' + myProfileButton);
+            return;
+        }
+
+        profileModalInstance = new SimpleModal(myProfileModal);
+        profileModalInstance.assignEventListeners(myProfileButton, myProfileModalLayer);
+    }
+
+    function setupSqlLibraryModal() {
+        var libraryButton = document.querySelector('#library-button'),
+            libraryModal = document.querySelector('.library-modal'),
+            libraryModalLayer = document.querySelector('.library-modal__layer');
+
+        var libraryModalInstance;
+
+        if (!libraryModal || !libraryButton) {
+            console.warn('Cannot find modal element. libraryModal: ' + libraryModal + ', libraryButton: ' + libraryButton);
+            return;
+        }
+
+        libraryModalInstance = new SimpleModal(libraryModal);
+        libraryModalInstance.assignEventListeners(libraryButton, libraryModalLayer);
+    }
+
+    function fetchStatus(basePath, onSuccess) {
+        var http = new XMLHttpRequest();
+        var url = basePath + '/api/v1/blog';
+        http.open('POST', url, true);
+
+        http.setRequestHeader('Content-type', 'application/json');
+
+        http.onreadystatechange = function() {
+            if(http.readyState == 4)  {
+                if (http.status == 200) {
+                    var json = JSON.parse(http.responseText);
+                    onSuccess(json);
+                } else {
+                    console.error('Menu error: ' + http.statusText + ' ' + http.responseText);
+                }
+            }
+        }
+        http.send();
+    }
+
+
+
+    function showFlashSale() {
+        var flashSale = new FlashSale("", getPath() + "/api/v1/fulmvendo");
+        flashSale.launch();
+        var flashSaleRootElement = document.getElementById('flash-sale-box');
+        if (flashSaleRootElement) {
+            flashSaleRootElement.appendChild(flashSale.render());
+        }
+    }
+
+    function getUserInfo() {
+        var basePath = getPath();
+
+
+        fetchStatus(basePath, function(result) {
+            if (result.isLogged) {
+                enableLoggedMenu(basePath, result.fullName, result.cdnPrefix);
+            }
+
+            var status = GtmHelper.getStatusFromCookie();
+            window.dataLayer.push({
+                'userType': status.type,
+                'isLoggedIn': result.isLogged,
+                'GID': status.gid
+            });
+
+        })
+    }
+
+    // Menu categories
+    const menu = document.querySelector('.cookbook-menu-nav');
+    const menuAll = document.querySelector('.cookbook-menu-nav-link.all');
+    const articlesContainer = document.querySelector('.cookbook-content');
+    const articles = document.querySelectorAll('.cookbook-list-item');
+
+    function resetArticles() {
+        articlesContainer.innerHTML = '';
+        for (let i = 0; i < articles.length; i++) {
+            articlesContainer.append(articles[i]);
+        }
+    }
+
+    if (menu) {
+
+        let categories = [];
+        for (let i = 0; i < menu.childElementCount - 1; i++) {
+            categories[i] = [];
+        }
+
+        articles.forEach(article => {
+            article.querySelectorAll('.cookbook-list-item-dialect').forEach(category => {
+                switch(category.innerHTML.toLowerCase()) {
+                    case 'standard sql':
+                        categories[0].push(article);
+                        break;
+                    case 'ms sql server':
+                        categories[1].push(article);
+                        break;
+                    case 'mysql':
+                        categories[2].push(article);
+                        break;
+                    case 'postgresql':
+                        categories[3].push(article);
+                        break;
+                    case 'oracle':
+                        categories[4].push(article);
+                        break;
+                    case 'sqlite':
+                        categories[5].push(article);
+                        break;
+                }
+            });
+        });
+
+        const ActiveMenuToggler = (...elements) => {
+            let active = elements.find(el => el.classList.contains('active'));
+            return {
+                select(element) {
+                    if (elements.includes(element) && active !== element) {
+                        active && active.classList.remove('active');
+                        element.classList.add('active');
+                        active = element;
+                    }
+                }
+            }
+        }
+
+        const menuToggler = ActiveMenuToggler(...document.querySelectorAll('.cookbook-menu-nav-link'));
+
+        menuAll.addEventListener('click', function() {
+            menuToggler.select(this);
+            resetArticles();
+        });
+        menu.querySelectorAll('.cookbook-menu-nav-item:not(:first-child) > .cookbook-menu-nav-link').forEach((el, index) => {
+            el.addEventListener('click', function() {
+                menuToggler.select(this);
+                articlesContainer.innerHTML = '';
+                for (let i = 0; i < categories[index].length; i++) {
+                    articlesContainer.append(categories[index][i]);
+                }
+            });
+        });
+
+    }
+
+    const images = document.querySelectorAll('.lazyload');
+
+    if (images.length) {
+        function Lazyload() {
+            this.io;
+            this.images = [];
+
+            this.io = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    const element = entry.target;
+                    if (entry.isIntersecting) {
+                        if (typeof element.naturalHeight !== 'undefined') {
+                            element.src = element.dataset.src;
+                        } else {
+                            element.style.backgroundImage = element.dataset.src;
+                        }
+                        element.classList.add('loaded');
+                        this.io.unobserve(element);
+                        this.images.pop();
+                        this.checkIfFinished();
+                    }
+                });
+            });
+            this.addImage = function(image) {
+                this.images.push(image);
+                this.io.observe(image);
+            };
+            this.checkIfFinished = function() {
+                if (!this.images.length) {
+                    this.io.disconnect();
+                }
+            };
+        }
+        const lazyload = new Lazyload();
+
+        images.forEach(image => {
+            lazyload.addImage(image);
+        });
+    }
+
+});

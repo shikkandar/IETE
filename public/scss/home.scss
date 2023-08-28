@@ -1,0 +1,51 @@
+@use './abstract/universal';
+@use "./abstract/mixin" as *;
+@use "./home/home-main-con";
+@use "./home/home-center" as *;
+@use "./home/home-cars" as *;
+
+.home-svg{
+    z-index: 1;
+  
+}
+.blue{
+    position: absolute;
+    top: 20vh;
+    background-color: #001F4D;
+    height: 80vh;
+    width: 100%;
+    z-index: -1;
+
+}
+@media (max-width:1600px) {
+    .home-svg{
+        height: 60vh;
+        width: 100%;
+    }
+}
+@media (max-width:1300px) {
+    .blue{
+        top: 35vh;
+    }
+    .home-svg{
+        height: 65vh;
+    }
+}
+@media (max-width:900px) {
+    .blue{
+        top: 35vh;
+        height: 65vh;
+    }
+    .home-svg{
+        height: 65vh;
+    }
+}
+@media (max-width:450px) {
+    .blue{
+        top: 40vh;
+        height: 60vh;
+    }
+    .home-svg{
+        height: 70vh;
+    }
+}

@@ -1,0 +1,69 @@
+<svg id="wave" style={{transform:'rotate(180deg)',transition: '0.3s'}} viewBox="0 0 1440 490" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(0, 31, 77, 1)" offset="0%"></stop><stop stop-color="rgba(32.027, 35.203, 93.668, 1)" offset="100%"></stop></linearGradient></defs><path style={{transform:'translate(0, 0px)', opacity:'1'}} fill="url(#sw-gradient-0)" d="M0,294L120,245C240,196,480,98,720,73.5C960,49,1200,98,1440,130.7C1680,163,1920,180,2160,155.2C2400,131,2640,65,2880,98C3120,131,3360,261,3600,294C3840,327,4080,261,4320,253.2C4560,245,4800,294,5040,261.3C5280,229,5520,114,5760,73.5C6000,33,6240,65,6480,81.7C6720,98,6960,98,7200,98C7440,98,7680,98,7920,98C8160,98,8400,98,8640,114.3C8880,131,9120,163,9360,147C9600,131,9840,65,10080,81.7C10320,98,10560,196,10800,269.5C11040,343,11280,392,11520,408.3C11760,425,12000,408,12240,351.2C12480,294,12720,196,12960,196C13200,196,13440,294,13680,285.8C13920,278,14160,163,14400,98C14640,33,14880,16,15120,32.7C15360,49,15600,98,15840,130.7C16080,163,16320,180,16560,212.3C16800,245,17040,294,17160,318.5L17280,343L17280,490L17160,490C17040,490,16800,490,16560,490C16320,490,16080,490,15840,490C15600,490,15360,490,15120,490C14880,490,14640,490,14400,490C14160,490,13920,490,13680,490C13440,490,13200,490,12960,490C12720,490,12480,490,12240,490C12000,490,11760,490,11520,490C11280,490,11040,490,10800,490C10560,490,10320,490,10080,490C9840,490,9600,490,9360,490C9120,490,8880,490,8640,490C8400,490,8160,490,7920,490C7680,490,7440,490,7200,490C6960,490,6720,490,6480,490C6240,490,6000,490,5760,490C5520,490,5280,490,5040,490C4800,490,4560,490,4320,490C4080,490,3840,490,3600,490C3360,490,3120,490,2880,490C2640,490,2400,490,2160,490C1920,490,1680,490,1440,490C1200,490,960,490,720,490C480,490,240,490,120,490L0,490Z"></path></svg>
+import React, { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
+import '../css/nav1.css';
+
+function Navbar() {
+  const navItem = ["Home", "About", "Committee", "Events", "Membership", "Chencon", "Newsletter", "Contact"];
+  const path = ["/", "/about", "/ExecutiveCommittee", "/Events", "/Membership", "/Chencon", "/Chenlink Newsletter", "/Contact"];
+
+  const navLinkActive = ({ isActive }) => {
+    return {
+      color: isActive ? "white" : "black",
+      backgroundColor: isActive ? "#001F4D" : "transparent",
+    };
+  };
+
+  useEffect(() => {
+    let prevScrollPos = window.pageYOffset;
+    const navbar = document.querySelector(".navbar");
+    const scrollDistance = 600;
+
+    window.addEventListener("scroll", function () {
+      const currentScrollPos = window.pageYOffset;
+
+      if (prevScrollPos > currentScrollPos) {
+        navbar.classList.remove("hide");
+      } else {
+        if (currentScrollPos > scrollDistance) {
+          navbar.classList.add("hide");
+        }
+      }
+
+      prevScrollPos = currentScrollPos;
+
+      if (currentScrollPos === 0) {
+        navbar.classList.remove("hide");
+        navbar.classList.remove("top");
+      } else {
+     
+      }
+    });
+  }, []);
+
+  return (
+    <>
+      <div className='navbar'>
+        <a href='/'><img className='header-img' src='/img/logo1.jpg' alt='builders-logo' /></a>
+        <input type="checkbox" id="menu-bar" />
+        <label htmlFor="menu-bar" className="checkbtn">
+          <svg className='toggle-btn' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" /></svg>
+        </label>
+        <nav>
+          <ul>
+            {navItem.map((item, index) => (
+              <li className={navItem[index]} key={index}>
+                <NavLink style={navLinkActive} to={path[index]}>
+                  {item}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+      <svg id="wave" style={{transform:'rotate(180deg)',transition: '0.3s'}} viewBox="0 0 1440 490" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(0, 31, 77, 1)" offset="0%"></stop><stop stop-color="rgba(32.027, 35.203, 93.668, 1)" offset="100%"></stop></linearGradient></defs><path style={{transform:'translate(0, 0px)', opacity:'1'}} fill="url(#sw-gradient-0)" d="M0,294L120,245C240,196,480,98,720,73.5C960,49,1200,98,1440,130.7C1680,163,1920,180,2160,155.2C2400,131,2640,65,2880,98C3120,131,3360,261,3600,294C3840,327,4080,261,4320,253.2C4560,245,4800,294,5040,261.3C5280,229,5520,114,5760,73.5C6000,33,6240,65,6480,81.7C6720,98,6960,98,7200,98C7440,98,7680,98,7920,98C8160,98,8400,98,8640,114.3C8880,131,9120,163,9360,147C9600,131,9840,65,10080,81.7C10320,98,10560,196,10800,269.5C11040,343,11280,392,11520,408.3C11760,425,12000,408,12240,351.2C12480,294,12720,196,12960,196C13200,196,13440,294,13680,285.8C13920,278,14160,163,14400,98C14640,33,14880,16,15120,32.7C15360,49,15600,98,15840,130.7C16080,163,16320,180,16560,212.3C16800,245,17040,294,17160,318.5L17280,343L17280,490L17160,490C17040,490,16800,490,16560,490C16320,490,16080,490,15840,490C15600,490,15360,490,15120,490C14880,490,14640,490,14400,490C14160,490,13920,490,13680,490C13440,490,13200,490,12960,490C12720,490,12480,490,12240,490C12000,490,11760,490,11520,490C11280,490,11040,490,10800,490C10560,490,10320,490,10080,490C9840,490,9600,490,9360,490C9120,490,8880,490,8640,490C8400,490,8160,490,7920,490C7680,490,7440,490,7200,490C6960,490,6720,490,6480,490C6240,490,6000,490,5760,490C5520,490,5280,490,5040,490C4800,490,4560,490,4320,490C4080,490,3840,490,3600,490C3360,490,3120,490,2880,490C2640,490,2400,490,2160,490C1920,490,1680,490,1440,490C1200,490,960,490,720,490C480,490,240,490,120,490L0,490Z"></path></svg>
+    </>
+  );
+}
+
+export default Navbar;

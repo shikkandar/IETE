@@ -1,0 +1,75 @@
+function loadBlogBanners(camp) {
+	var dir = `/blog/banners/${camp}`;
+	var file = `${dir}/data.json`;
+	fetch(file)
+		.then(response => response.json())
+		.then(json => {
+			function getBanner(url) {
+				/* fallback for non-existent banners to platform banners */
+				if (!json[url]) {
+					url = "/";
+				}
+
+				/* let's check if it was already used */
+				/* and if not let's randomize the data*/
+				if (!json[url].currentIndex) {
+					/* randomize */
+					json[url].banners = json[url].banners
+						.map((a) => ({sort: Math.random(), value: a}))
+						.sort((a, b) => a.sort - b.sort)
+						.map((a) => a.value);
+					/* prepare counter */
+					json[url].currentIndex = 0;
+				}
+
+				var numberOfBanners = json[url].banners.length;
+				var index = json[url].currentIndex % numberOfBanners;
+				json[url].currentIndex++;
+				var banner = json[url].banners[index];
+				return banner;
+			}
+
+			function getCompleteUrl(url, banner) {
+				/* fallback for non-existent banners to platform banners */
+				if (!json[url]) {
+					url = "/";
+				}
+
+				var id = url
+					.replace(/\//g, "-")
+					.replace(/^-$/, "platform")
+					.replace(/^-+/, "")
+					.replace(/-+$/, "");
+				var urlArgs = [];
+				urlArgs.push("itm_source=lsqlBlog");
+				urlArgs.push("itm_campaign=" + camp);
+				/* banner or text */
+				urlArgs.push("itm_medium=" + banner.type);
+				/* ID */
+				urlArgs.push("itm_content=" + id + "-" + banner.id);
+
+				if (!!banner.targetUrl)
+					url = banner.targetUrl;
+
+				var completeUrl = url + "?" + urlArgs.join("&");
+				return completeUrl;
+			}
+
+			document.querySelectorAll(".rek-banner").forEach(bannerElem => {
+				var url = bannerElem.getAttribute("banner-url");
+				var banner = getBanner(url);
+				var completeUrl = getCompleteUrl(url, banner);
+
+				if (banner.type == "text") {
+					bannerElem.innerHTML = `<p class="rek-banner-content">${banner.text}</p>`;
+				} else if (banner.type == "img") {
+					bannerElem.innerHTML = `<a><img src="${dir}/${banner.src}" alt="${banner.alt}" class="expand" /></a>`;
+				}
+				bannerElem.querySelectorAll("a").forEach(a => a.href = completeUrl);
+				bannerElem.classList.add("rek-banner-" + camp);
+				bannerElem.classList.add("rek-banner-" + banner.type);
+				if (!!banner.classes)
+					banner.classes.forEach(cl => bannerElem.classList.add(cl))
+			});
+		});
+};

@@ -1,0 +1,140 @@
+@use '../abstract/color' as *;
+@use '../home/homeAnim';
+.home-main{
+    position: absolute;
+    top: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 100px;
+    
+   &-con{
+    display: flex;
+    flex-direction: column;
+    
+    
+   }
+    .le-ld{
+        font-size: 12rem;
+        color: $primary-text-color-hover;
+        display: flex;
+        &-con{
+            margin-top: 40px;
+        }
+        &-text1{
+            font-size: 4rem;
+            color: $primary-text-color
+        }
+        &-text2{
+            @extend .le-ld-text1;
+        }
+        @media (max-width:1300px) {
+           &-text1{
+            font-size: 3rem;
+           }
+        }
+        
+        @media (max-width:1100px) {
+           &-text1{
+            font-size: 1.8rem;
+           }
+           
+        }
+        
+    }
+    &-svg{
+        width: 35%;
+        margin-top: 20px;
+    }
+    @media (max-width:1300px) {
+        .le-ld{
+            font-size: 9.5rem;
+           }
+       
+    }
+    @media (max-width:1100px) {
+        .le-ld{
+            font-size: 7rem;
+           }
+       
+    }
+    @media (max-width:900px) {
+        &-svg{
+            width: 70%;
+        }
+       
+    }
+}
+
+.up-text{
+    font-size: 2rem;
+    font-weight:700 ;
+    color: $primary-text-color-hover;
+    margin-top: 10px;
+}
+.webinar-text-con{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.webinar-text{
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color:whitesmoke;
+    padding: 20px 10px;
+    &-date{
+        width: 30%;
+        font-size: 2rem;
+        font-weight: 700;
+        color: $primary-text-color;
+
+        text-align: center ;
+    }
+    &-event{
+        font-size: 1.3rem;
+       
+        a{
+            color: $primary-text-color;
+        }
+      
+    }
+    @media (max-width:1100px) {
+      &-date{
+        font-size: 1.2rem;
+      }
+      &-event{
+        font-size:0.8rem ;
+      }
+     }
+
+}
+
+@media (max-width:1100px) {
+   .up-text{
+    font-size: 1.5rem;
+   }
+   .webinar-text{
+    width: 400px;
+   }
+}
+@media (max-width:900px) {
+ .home-main{
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   row-gap: 20px;
+   top: 15vh;
+ }
+}
+@media (max-width:450px) {
+    .webinar-text{
+        width: 90%;
+       }
+       .home-main-con{
+        width: 95%;
+       }
+}

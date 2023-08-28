@@ -9,6 +9,7 @@
   }
   body{
     min-height: 100vh;
+  
   }
   .header-img{
     height: 70px;
@@ -22,10 +23,10 @@
     left: 0;
     right: 0;
     position: fixed;
-    background: rgb(245,245,245);
-    background: transparent;
+    background:#fff;
+  
     opacity: 1;
-    padding: 5px 20px 0px 0px;
+    padding: 5px 20px 0px 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -121,6 +122,9 @@
     .navbar{
         padding: 20px;
       }
+      #nav {
+        display: none;
+      }
       .navbar label  {
         display: initial;
       }
@@ -129,7 +133,7 @@
         width: 100%;
         background: white;
         min-height: 100vh;
-        top: 80px;
+        top: 100px;
         left: -100%;
         text-align: center;
         transition: all 0.5s;

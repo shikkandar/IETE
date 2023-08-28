@@ -1,0 +1,258 @@
+"use strict";
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var FlashSale = // TODO(@pochka15):
+
+/**
+ * ctor
+ * @param {string} contentRootId
+ * @param {string} apiUrl - flashSale api URL
+ */
+function FlashSale(contentRootId, apiUrl) {
+  _classCallCheck(this, FlashSale);
+
+  _defineProperty(this, "contentRootId", void 0);
+
+  _defineProperty(this, "IS_CLOSED_KEY", 'isFlashSaleBoxClosed');
+
+  _defineProperty(this, "timer", null);
+
+  _defineProperty(this, "timeoutRef", null);
+
+  _defineProperty(this, "intervalRef", null);
+
+  _defineProperty(this, "parentElement", null);
+
+  _defineProperty(this, "state", void 0);
+
+  _defineProperty(this, "apiUrl", void 0);
+
+  _defineProperty(this, "launch", function () {
+    var _this = this;
+
+    if (window.sessionStorage.getItem(this.IS_CLOSED_KEY) !== 'true') {
+      this.fetchState().then(function () {
+        if (_this.state.isFlashSaleActive) {
+          _this.timeoutRef = setTimeout(function () {
+            _this.state.isVisible = true;
+          }, 2000);
+        }
+      })["catch"](function (error) {
+        window.console.error('Error while fetching FlashSale:', error);
+      });
+    }
+  });
+
+  _defineProperty(this, "render", function () {
+    var body = document.querySelector('body');
+    var hiddenClass = '';
+
+    if (!this.state.isVisible) {
+      if (body) body.classList.remove('flash-sale-show');
+      hiddenClass = 'hidden';
+    } else {
+      if (body) body.classList.add('flash-sale-show');
+    }
+
+    var parentElement = this.parentElement || createElement('div', "flash-sale-box__wrapper ".concat(hiddenClass));
+    parentElement.innerHTML = "<div class='flash-sale-box'>\n            <div class='flash-sale-box__separator'></div>\n            <p class='flash-sale-box__description flash-sale-box__row'>\n                ".concat(this.state.description, "\n            </p>\n            <div class='flash-sale-box__separator'></div>\n            <p class='flash-sale-box__timer flash-sale-box__row'>\n                <svg class=\"flash-sale-box__time-icon\" role=\"img\" width=\"16px\" height=\"16px\" viewBox=\"0 0 16 16\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n                    <title>1A004D51-4FE9-4995-B456-8C6A3AD955F9@2x</title>\n                    <g id=\"04-TRACK-DETAILS\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n                        <g id=\"LearnSQL_Track_Details\" transform=\"translate(-1303.000000, -343.000000)\" fill=\"currentColor\" fill-rule=\"nonzero\">\n                            <g id=\"Pricing\" transform=\"translate(1266.000000, 120.000000)\">\n                                <g id=\"Bullets\" transform=\"translate(37.000000, 223.000000)\">\n                                    <path d=\"M7.9869281,0 C9.07189542,0 10.1098039,0.214519294 11.103268,0.638325703 C13.0849673,1.48593852 14.5176471,2.91693918 15.3620915,4.88423806 C15.7856209,5.87573578 16,6.90647482 16,7.99215173 C16,9.07782865 15.7856209,10.116416 15.3620915,11.1079137 C14.5176471,13.0752126 13.0849673,14.5140615 11.1006536,15.3616743 C10.1098039,15.7828646 9.07189542,16 7.9869281,16 C6.90196078,16 5.87189542,15.7854807 4.88104575,15.3616743 C2.91503268,14.5166776 1.4745098,13.0778286 0.630065359,11.1079137 C0.206535948,10.1216481 0,9.07782865 0,7.99215173 C0,6.90647482 0.206535948,5.8705036 0.630065359,4.88423806 C1.4745098,2.911707 2.91503268,1.48332243 4.88104575,0.638325703 C5.87189542,0.214519294 6.90196078,0 7.9869281,0 Z M7.63053323,2.89862655 C7.14308141,2.89862655 6.70588235,3.32102586 6.70588235,3.83896786 L6.70588235,8.2649146 C6.70588235,8.28000028 6.74105929,8.35040017 6.74105929,8.4006858 C6.70588235,8.70239959 6.79131205,8.95382774 6.99232311,9.15999883 L9.81046269,11.1763998 C10.1471562,11.5133135 10.7702905,11.5133135 11.106984,11.1763998 C11.4939303,10.7892004 11.4688039,10.2260013 11.106984,9.8639448 L8.60543687,8.12914339 L8.60543687,3.83896786 C8.60543687,3.31599729 8.15316198,2.89862655 7.63053323,2.89862655 Z\" id=\"ico_time\"></path>\n                                </g>\n                            </g>\n                        </g>\n                    </g>\n                </svg>\n            </p>\n            <button class='flash-sale-box__close-button'>\n                <svg class=\"flash-sale-box__close-icon icon icon--ico_close\" width=\"14px\" height=\"14px\" viewBox=\"0 0 14 14\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n                    <!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch -->\n                    <title>968D8794-2BF9-4958-83D2-AAA2C30BAF68@2x</title>\n                    <desc>Created with sketchtool.</desc>\n                    <g id=\"06-LIBRARY\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n                        <g id=\"LearnSQL_Library_Articles_Listing\" transform=\"translate(-1136.000000, -335.000000)\" fill=\"white\" fill-rule=\"nonzero\">\n                            <g id=\"Search\" transform=\"translate(0.000000, 190.000000)\">\n                                <g id=\"Form\" transform=\"translate(683.000000, 120.000000)\">\n                                    <path d=\"M460,31.125 L466.125,25 L467,25.875 L460.875,32 L467,38.125 L466.125,39 L460,32.875 L453.875,39 L453,38.125 L459.125,32 L453,25.875 L453.875,25 L460,31.125 Z\" id=\"ico_clear\"></path>\n                                </g>\n                            </g>\n                        </g>\n                    </g>\n                </svg>\n        </div>");
+    var promoName = getPromoNameElement(this.state.name, this.state.deadlineTsUtc);
+    var timer = this.getTimer(this.calculateTime());
+    var firstSeparator = parentElement.querySelector('.flash-sale-box__separator');
+    var timerText = parentElement.querySelector('p.flash-sale-box__timer');
+    var button = parentElement.querySelector('.flash-sale-box__close-button');
+    button.addEventListener('click', this.onClose.bind(this));
+    firstSeparator.insertAdjacentElement('beforebegin', promoName);
+    timerText.insertAdjacentElement('beforeend', timer);
+    this.parentElement = parentElement;
+    return this.parentElement;
+  });
+
+  _defineProperty(this, "fetchState", function () {
+    var _this2 = this;
+
+    return new Promise(function (resolve, reject) {
+      get(_this2.apiUrl, function (resp) {
+        _this2.state.isFlashSaleActive = resp.isFlashSaleActive;
+        _this2.state.name = resp.name;
+        _this2.state.description = resp.description;
+        _this2.state.deadlineTsUtc = resp.deadlineTsUtc;
+        resolve();
+      }, function (err) {
+        reject(err);
+      });
+    });
+  });
+
+  _defineProperty(this, "getTimer", function (time) {
+    var _this3 = this;
+
+    var _time = _slicedToArray(time, 3),
+        hours = _time[0],
+        minutes = _time[1],
+        seconds = _time[2];
+
+    var span = createElement('span', 'timer');
+    var mins = this.formatTime(minutes);
+    var secs = this.formatTime(seconds);
+    span.innerText = "".concat(hours, "h : ").concat(mins, "m : ").concat(secs, "s");
+
+    if (!this.intervalRef) {
+      this.intervalRef = setInterval(function () {
+        return _this3.refreshTimer();
+      }, 1000);
+    }
+
+    this.timer = span;
+    return span;
+  });
+
+  _defineProperty(this, "refreshTimer", function () {
+    var _this$calculateTime = this.calculateTime(),
+        _this$calculateTime2 = _slicedToArray(_this$calculateTime, 3),
+        hours = _this$calculateTime2[0],
+        minutes = _this$calculateTime2[1],
+        seconds = _this$calculateTime2[2];
+
+    this.timer.innerText = "".concat(hours, "h : ").concat(this.formatTime(minutes), "m : ").concat(this.formatTime(seconds), "s");
+
+    if (hours === 0 && minutes === 0 && seconds === 0) {
+      clearInterval(this.intervalRef);
+      this.destroy();
+    }
+  });
+
+  _defineProperty(this, "formatTime", function (unit) {
+    return "0".concat(unit).slice(-2);
+  });
+
+  _defineProperty(this, "calculateTime", function () {
+    var diffInMillis = this.state.deadlineTsUtc - new Date().getTime();
+
+    if (diffInMillis < 0) {
+      return [0, 0, 0];
+    }
+
+    var secondsToDeadline = diffInMillis / 1000;
+    var hours = Math.floor(secondsToDeadline / 3600);
+    var secondsInHour = secondsToDeadline - hours * 3600;
+    var minutes = Math.floor(secondsInHour / 60);
+    var seconds = Math.floor(secondsInHour % 60);
+    return [hours, minutes, seconds];
+  });
+
+  _defineProperty(this, "onClose", function () {
+    window.sessionStorage.setItem(this.IS_CLOSED_KEY, 'true');
+    this.destroy();
+  });
+
+  _defineProperty(this, "destroy", function () {
+    this.state.isVisible = false;
+
+    if (this.timeoutRef) {
+      clearTimeout(this.timeoutRef);
+    }
+  });
+
+  this.contentRootId = contentRootId;
+  this.apiUrl = apiUrl;
+  var self = this;
+  this.state = {
+    _isVisible: false,
+
+    get isVisible() {
+      return this._isVisible;
+    },
+
+    set isVisible(newVal) {
+      this._isVisible = newVal;
+
+      if (this._isVisible) {
+        self.parentElement.classList.remove('hidden');
+      } else {
+        self.parentElement.classList.add('hidden');
+      }
+
+      self.render();
+    },
+
+    isFlashSaleActive: false,
+    name: '',
+    description: '',
+    deadlineTsUtc: 0
+  };
+};
+
+function getPromoNameElement(name, deadlineTsUtc) {
+  var diffInMillis = deadlineTsUtc - new Date().getTime();
+  var diffInSeconds = diffInMillis / 1000;
+  var hours = Math.floor(diffInSeconds / 3600);
+
+  var durationLabel = function (anHour) {
+    switch (anHour) {
+      case 0:
+        return 'only a few minutes!';
+
+      case 1:
+        return '1 hour only!';
+
+      default:
+        return "".concat(anHour, " hours only!");
+    }
+  }(hours);
+
+  var parentElement = createElement('p', 'flash-sale-box__name flash-sale-box__row');
+  parentElement.innerHTML = "".concat(name, " - <span class='flash-sale-box__duration'>").concat(durationLabel, "</span>");
+  return parentElement;
+}
+
+function createElement(tag, classes, ids) {
+  var newElement = document.createElement(tag);
+
+  if (classes) {
+    classes.split(' ').forEach(function (htmlClass) {
+      htmlClass.trim() && newElement.classList.add(htmlClass.trim());
+    });
+  }
+
+  if (ids) {
+    ids.split(' ').forEach(function (htmlId) {
+      newElement.id += htmlId + ' ';
+    });
+  }
+
+  return newElement;
+}
+
+function get(path, resolve, reject) {
+  var req = new XMLHttpRequest();
+  req.open('GET', path, true);
+  req.setRequestHeader('Content-type', 'application/json');
+
+  req.onreadystatechange = function () {
+    if (req.readyState === 4) {
+      if (req.status === 200) {
+        resolve(JSON.parse(req.responseText));
+      } else {
+        reject(req.statusText + ' ' + req.responseText);
+      }
+    }
+  };
+
+  req.send();
+}

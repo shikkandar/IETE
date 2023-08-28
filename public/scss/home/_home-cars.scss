@@ -1,0 +1,105 @@
+@use "../abstract/color" as*;
+.program-cards-con {
+    display: grid;
+    grid-template-columns: repeat(4, 350px);
+    column-gap: 40px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    row-gap: 40px;
+    
+  }
+  
+  .program-cards {
+    width: 350px;
+    min-height: 500px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgb(211, 208, 208);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    .p-c-img{
+        width: 100%;
+        height: 200px;
+        .explore-images{
+            width:100%;
+            height: 200px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+       
+    }
+    .program-line{
+        width: 100%;
+        height: 5px;
+        background-color: $primary-text-color-hover;
+    }
+    .p-c-info{
+        padding: 20px 10px;
+        .info-head{
+            font-family: 'Belanosima', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            color: $primary-text-color;
+        }
+        .info-content{
+            font-family: 'Ubuntu', sans-serif;
+            color: gray;
+            margin-top: 10px;
+            font-size: 16px;
+            width: 100%;
+            padding-right: 10px;
+            line-height: 25px;
+        }
+    }
+  }
+  
+  .program-cards:hover {
+    box-shadow:inset 1px 1px 20px rgb(255, 255, 255) ;
+    transition-duration: 0.5s;
+    
+  }
+ 
+  
+  @media (max-width: 360px) {
+    .program-cards {
+      width: 95%;
+    }
+  }
+  
+  @media (max-width: 1550px) {
+    .program-cards-con {
+      grid-template-columns: repeat(3, 350px);
+    }
+    .program-cards:nth-child(4) {
+      margin-left: 390px;
+    }
+  }
+  
+  @media (max-width: 1150px) {
+    .program-cards-con {
+      grid-template-columns: repeat(2, 350px);
+    }
+    .program-cards:nth-child(4) {
+      margin-left: 0px;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .program-cards-con {
+      grid-template-columns: repeat(1, 350px);
+    }
+  }
+  @media (max-width: 350px) {
+    .program-cards-con {
+      grid-template-columns: repeat(1,90%);
+      
+    }
+    .program-cards{
+      height: 100%;
+
+    }
+  }
+  

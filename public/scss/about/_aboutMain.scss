@@ -1,0 +1,56 @@
+@use "../abstract/mixin" as *;
+@use "../cards/num-card-2" as *;
+@use "../cards/program-cards2" as *;
+@use "../abstract/color" as *;
+.admissin-con{
+    margin-top: 150px;
+    .ug-cards{
+        display: flex;
+        margin-top: 30px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        row-gap:30px;
+        column-gap: 20px;
+        
+    }
+    .admission-svg{
+        width: 750px;
+        
+    }
+   
+    @media (max-width:1600px) {
+        .admission-svg{
+            width: 650px;
+        }
+    }
+    @media (max-width:1350px) {
+        .admission-svg{
+            width: 550px;
+            
+        }
+    }
+    @media (max-width:1150px) {
+        .ug-cards{
+            flex-direction: column;
+           
+        }
+        .admission-svg{
+            width: 750px;
+            
+        }
+    }
+    @media (max-width:750px) {
+        .admission-svg{
+            width:90%;
+            
+        }
+    }
+    @media (max-width:600px) {
+        .ug-text{
+            font-size: 24px;
+        }
+       
+    }
+ }
+

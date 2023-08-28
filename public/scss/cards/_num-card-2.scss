@@ -1,0 +1,111 @@
+@use "../abstract/color" as*;
+@use "../abstract/button" as *;
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Sacramento&display=swap');
+    .num-card {
+      display: flex;
+      column-gap: 40px;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 20px;
+      @mixin field{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+       font-weight: 900;
+      }
+      .number-field-1{
+        @include field;
+        color:$primary-text-color;
+        
+      }
+      .number-field-2{
+        @include field;
+        color:#2F2E41;
+      }
+      .number-field-3{
+        @include field;
+        color: $primary-text-color;
+        font-size: 4rem;
+      }
+    
+    
+     
+  
+      .num-con{
+      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 200px;
+     
+      }
+      .num-text{
+        font-weight: 900;
+        color:#2F2E41;
+        font-size: 22px;
+        font-family: 'Belanosima', sans-serif;
+  
+      }
+      .num-text2{
+        font-weight: 900;
+        color:#2F2E41;
+        font-size: 22px;
+        font-family: 'Belanosima', sans-serif;
+  
+      }
+      .num-text3{
+        font-weight: 900;
+        color:$primary-text-color;
+        font-size: 22px;
+        font-family: 'Belanosima', sans-serif;
+  
+      }
+      @media (max-width:500px) {
+        .num-text , .num-text1 , .num-text2 , .num-text3{
+          font-size: 16px;
+          font-weight: 700;
+        }
+      .number-field-1 , .number-field-2 , .number-field-3{
+          font-size: 30px;
+        }
+      }
+    }
+    @media (max-width:900px) {
+      .num-card{
+        display: grid;
+        grid-template-columns: repeat(3,150px);
+        row-gap: 50px;
+        column-gap: 80px;
+      }
+      .num-card-2{
+        display: grid;
+        grid-template-columns: repeat(2,150px);
+        row-gap: 50px;
+        column-gap: 80px;
+      }
+    }
+    @media (max-width:700px) {
+      .num-card{
+        column-gap: 20px;
+      }
+      .num-card-2{
+        column-gap: 20px;
+      }
+    }
+    @media (max-width:500px) {
+      .num-card{
+        grid-template-columns: repeat(3,100px);
+        column-gap: 10px;
+      
+
+      }
+      .num-card-2{
+        grid-template-columns: repeat(2,100px);
+        column-gap: 10px;
+      }
+    }
+   

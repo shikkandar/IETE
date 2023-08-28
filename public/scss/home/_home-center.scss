@@ -1,0 +1,49 @@
+@use '../abstract/color' as *;
+.homecenter-con{
+    width: 100%;
+    background-image: url('../../public/img/bacgroung/3274408.jpg');
+    height: 700px;
+    margin-top: 300px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    &-text{
+        width: 50%;
+        height: 70%;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, .25);
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.45);
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(10px);
+        padding: 20px 40px;
+      
+
+    }
+    &-text-head{
+        font-size: 1.9rem;
+        font-family: $primary-text;
+        font-weight: 900;
+        color: $primary-text-color;
+    }
+    &-text-content{
+        font-size: 1rem;
+        text-align: right;
+        color: gray;
+    }
+    &-text-content1{
+        font-size: 1.5rem;
+        margin-top: 50px;
+        text-indent: 50px;
+    }
+    .read-btn{
+        padding: 15px 30px;
+        position: absolute;
+        bottom: 50px;
+        border: none;
+        border-radius: 10px;
+        background-color: $primary-text-color-hover;
+        font-weight: 900;
+        color: #fff;
+    }
+}

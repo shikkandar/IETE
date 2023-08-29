@@ -108,6 +108,42 @@
   font-weight: 400;
   font-family: "Belanosima", sans-serif;
 }
+.event2-con1-ulcon {
+  width: 100%;
+  font-size: 1.3rem;
+  color: #001F4D;
+  font-weight: 900;
+}
+.event2-con1-ulcon-ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  line-height: 30px;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: gray;
+}
+.event2-con1-ulcon-ul li {
+  list-style: none;
+}
+.event2-con1-table {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+.event2-con1-table table {
+  width: 90%;
+}
+.event2-con1-table table, .event2-con1-table th, .event2-con1-table td {
+  border: 1.5px solid gray;
+  border-collapse: collapse;
+  padding: 15px;
+}
+.event2-con1-table td {
+  text-align: center;
+  line-height: 30px;
+}
 
 .btn-collection {
   display: flex;
@@ -135,4 +171,11 @@
   width: 100%;
   height: 1.5px;
   background-color: gray;
+}
+
+.event-img {
+  width: 65%;
+  height: 500px;
+  border-radius: 10px;
+  border: 2px solid rgb(180, 178, 178);
 }/*# sourceMappingURL=event.css.map */

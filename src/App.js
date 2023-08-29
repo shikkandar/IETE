@@ -6,13 +6,13 @@ import { Placement } from './component/placement';
 import { Nomatch } from './component/nomathch';
 import { Featured } from './component/featured';
 import { New } from './component/new';
-import { Users } from './component/Users';
 import { UserDetails } from './component/UserDetails';
 import { Admin } from './component/Admin';
 import { useState,useEffect } from 'react';
 import ClipLoader from "react-spinners/ClipLoader";
 import { Home } from './component/home/Home';
 import { Event } from './component/event-pages/Event';
+import { Members } from './component/members/Members';
 function App() {
   const[loading,setLoding]=useState(false)
   useEffect(()=>{
@@ -38,7 +38,7 @@ function App() {
       <Route path='/about' element={<About/>} />
       <Route path='/ExecutiveCommittee' element={<Commitee/>} />
       <Route path='/Events' element={<Event/>} />
-      <Route path='/Membership' element={<Users/>}>
+      <Route path='/Membership' element={<Members/>}>
         <Route path=':userId' element={<UserDetails/>}/>
         <Route path='admin' element={<Admin/>}/>
       </Route>

@@ -124,42 +124,42 @@
     .builders-card-con{
         width:90%;
       }
-    //   .shik{
-    //     position: relative;
-    //     z-index: 0;
-    //     overflow: hidden;
-    //     border-radius: 10px;
-    //     transition: 0.5s;
-    //     box-shadow: 2px 2px 20px rgb(232, 229, 229);
-    // &::before{
-    //     content:'';
-    //     position:absolute ;
-    //     z-index: -2;
-    //     width: 200%;
-    //     height: 200%;
-    //     background-color:white;
-    //     top: -50%;
-    //     left: -50%;
-    //     background-image: linear-gradient(white,white),
-    //                       linear-gradient( rgba(5,58,117,1), #053a75),
-    //                       linear-gradient( #00BFA6, #00BFA6),
-    //                       linear-gradient(white,white);
-    //     background-repeat: no-repeat;
-    //     background-size: 40% 45%;
-    //     background-position: 0 0,100% 0,0 100%,100% 100%;
-    //     animation: shik 10s linear  infinite  ;
-    // }
-    // &::after{
-    //     content: ' ';
-    //     position: absolute;
-    //     width: calc(100% - 6px);
-    //     height: calc(100% - 6px);
-    //     background-color: white;
-    //     border-radius: 10px;
-    //     top: 3px;
-    //     left: 3px;
-    // }
-    //   }
+      .shik{
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+        border-radius: 10px;
+        transition: 0.5s;
+        box-shadow: 2px 2px 20px rgb(232, 229, 229);
+    &::before{
+        content:'';
+        position:absolute ;
+        z-index: -2;
+        width: 200%;
+        height: 200%;
+        background-color:white;
+        top: -50%;
+        left: -50%;
+        background-image: linear-gradient(white,white),
+                          linear-gradient( rgba(5,58,117,1), #053a75),
+                          linear-gradient( #00BFA6, #00BFA6),
+                          linear-gradient(white,white);
+        background-repeat: no-repeat;
+        background-size: 40% 45%;
+        background-position: 0 0,100% 0,0 100%,100% 100%;
+        animation: shik 10s linear  infinite  ;
+    }
+    &::after{
+        content: ' ';
+        position: absolute;
+        width: calc(100% - 6px);
+        height: calc(100% - 6px);
+        background-color: white;
+        border-radius: 10px;
+        top: 3px;
+        left: 3px;
+    }
+      }
 }
 @media (max-width:600px) {
     .content{

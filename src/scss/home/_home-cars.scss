@@ -13,7 +13,7 @@
   
   .program-cards {
     width: 350px;
-    min-height: 500px;
+    min-height: 450px;
     border-radius: 10px;
     box-shadow: 5px 5px 20px rgb(211, 208, 208);
     display: flex;
@@ -55,12 +55,10 @@
         }
     }
   }
-  
-  .program-cards:hover {
-    box-shadow:inset 1px 1px 20px rgb(255, 255, 255) ;
-    transition-duration: 0.5s;
-    
+  .program-cards:hover{
+    border: 1px solid $primary-text-color;
   }
+
  
   
   @media (max-width: 360px) {

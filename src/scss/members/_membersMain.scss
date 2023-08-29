@@ -1,0 +1,23 @@
+@use '../abstract/color' as *;
+.member-con{
+    margin-top: 150px;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.head-text{
+    font-family: $primary-text;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: $primary-text-color;
+}
+.content-text{
+    color: gray;
+    margin-top: 20px;
+    width: 60%;
+    font-size: 1.2rem;
+    line-height: 25px;
+}

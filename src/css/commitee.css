@@ -36,10 +36,13 @@
   display: flex;
 }
 .program-cards-2 .p-c-img-2 .explore-images-2 {
-  width: 200px;
+  width: 180px;
   height: 180px;
   border-radius: 50%;
   border: 3px solid gray;
+}
+.program-cards-2 .program-cards-2:hover {
+  border: 5px solid #fb8c00;
 }
 .program-cards-2 .program-line-2 {
   width: 100%;
@@ -59,10 +62,10 @@
   font-family: "Ubuntu", sans-serif;
   color: gray;
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 16px;
   width: 100%;
   padding-right: 10px;
-  line-height: 20px;
+  line-height: 25px;
 }
 .program-cards-2 .p-c-info-2 .info-content-1 {
   color: #fb8c00;

@@ -35,13 +35,16 @@
         display: flex;
        
         .explore-images-2{
-            width:200px;
+            width:180px;
             height: 180px;
             border-radius: 50%;
             border: 3px solid gray;
          
         }
        
+    }
+    .program-cards-2:hover{
+       border:5px solid $primary-text-color-hover ;
     }
     .program-line-2{
         width: 100%;
@@ -60,10 +63,10 @@
             font-family: 'Ubuntu', sans-serif;
             color: gray;
             margin-top: 10px;
-            font-size: 14px;
+            font-size: 16px;
             width: 100%;
             padding-right: 10px;
-            line-height: 20px;
+            line-height: 25px;
         }
         .info-content-1{
           @extend .info-content-2;
@@ -76,11 +79,11 @@
     }
   }
   
-  // .program-cards-2:hover {
-  //   // box-shadow:inset 1px 1px 20px rgb(255, 255, 255) ;
-  //   // transition-duration: 0.5s;
+  .program-cards-2:hover {
+    // box-shadow:inset 1px 1px 20px rgb(255, 255, 255) ;
+    // transition-duration: 0.5s;
     
-  // }
+  }
  
   
   @media (max-width: 360px) {

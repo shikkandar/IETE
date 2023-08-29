@@ -82,6 +82,11 @@
   font-size: 1.3rem;
   font-weight: 700;
 }
+.event2-con1-orange-blue {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: rgb(7, 7, 85);
+}
 .event2-con1-gray {
   color: gray;
   font-size: 1.3rem;
@@ -93,6 +98,22 @@
   font-weight: 400;
   line-height: 35px;
   text-indent: 50px;
+}
+.event2-con1-blue-1 {
+  color: rgb(11, 147, 214);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 35px;
+  text-indent: 50px;
+  cursor: pointer;
+}
+.event2-con1-blue-1:hover {
+  color: rgb(31, 114, 156);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 35px;
+  text-indent: 50px;
+  cursor: pointer;
 }
 .event2-con1-normal {
   font-size: 1.2rem;
@@ -127,6 +148,9 @@
 .event2-con1-ulcon-ul li {
   list-style: none;
 }
+.event2-con1-ulcon-ul ul {
+  width: 30%;
+}
 .event2-con1-table {
   width: 100%;
   justify-content: center;
@@ -143,6 +167,9 @@
 .event2-con1-table td {
   text-align: center;
   line-height: 30px;
+}
+.event2-con1-table h1 {
+  font-size: 15px;
 }
 
 .btn-collection {

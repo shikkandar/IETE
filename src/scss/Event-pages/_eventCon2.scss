@@ -26,6 +26,11 @@
         color: $primary-text-color-hover;
         font-size: 1.3rem;
         font-weight: 700;
+        &-blue{
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: $form-blue;
+        }
     }
     &-gray{
         color: gray;
@@ -38,6 +43,22 @@
         font-weight: 400;
         line-height: 35px;
         text-indent: 50px;
+    }
+    &-blue-1{
+        color: rgb(11, 147, 214);
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 35px;
+        text-indent: 50px;
+        cursor: pointer;
+    }
+    &-blue-1:hover{
+        color: rgb(31, 114, 156);
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 35px;
+        text-indent: 50px;
+        cursor: pointer;
     }
     &-normal{
         font-size: 1.2rem;
@@ -71,6 +92,10 @@
             color: gray ;
             li{
                 list-style: none;
+               
+            }
+            ul{
+                width: 30%;
             }
         }
    }
@@ -89,6 +114,9 @@
              td{
                 text-align: center;
                 line-height: 30px;
+             }
+             h1{
+                font-size: 15px;
              }
 }
 }

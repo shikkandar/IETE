@@ -82,6 +82,11 @@
   font-size: 1.3rem;
   font-weight: 700;
 }
+.event2-con1-orange-text {
+  color: rgb(7, 7, 85);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
 .event2-con1-gray {
   color: gray;
   font-size: 1.3rem;
@@ -89,6 +94,20 @@
 }
 .event2-con1-gray-1 {
   color: gray;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 35px;
+  text-indent: 50px;
+}
+.event2-con1-blue {
+  color: rgb(50, 171, 231);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 35px;
+  text-indent: 50px;
+}
+.event2-con1-blue:hover {
+  color: rgb(42, 143, 194);
   font-size: 1rem;
   font-weight: 400;
   line-height: 35px;

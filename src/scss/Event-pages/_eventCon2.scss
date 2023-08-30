@@ -26,6 +26,11 @@
         color: $primary-text-color-hover;
         font-size: 1.3rem;
         font-weight: 700;
+        &-text{
+            color: $form-blue;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
     }
     &-gray{
         color: gray;
@@ -38,6 +43,20 @@
         font-weight: 400;
         line-height: 35px;
         text-indent: 50px;
+    }
+    &-blue{
+        color: rgb(50, 171, 231);
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 35px;
+        text-indent: 50px;
+        &:hover{
+            color: rgb(42, 143, 194);
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 35px;
+            text-indent: 50px;
+        }
     }
     &-normal{
         font-size: 1.2rem;

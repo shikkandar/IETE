@@ -9,7 +9,6 @@
     display: flex;
     &-text{
         width: 50%;
-        height: 70%;
         border-radius: 10px;
         border: 1px solid rgba(255, 255, 255, .25);
         border-radius: 20px;
@@ -38,12 +37,53 @@
     }
     .read-btn{
         padding: 15px 30px;
-        position: absolute;
-        bottom: 50px;
+        position: relative;
+        bottom:0px;
         border: none;
         border-radius: 10px;
         background-color: $primary-text-color-hover;
         font-weight: 900;
         color: #fff;
+        margin-top: 50px;
+    }
+   @media (max-width:1400px) {
+        &-text-head{
+            font-size: 1.3rem;
+        }
+        &-text-content{
+            font-size: 0.7rem;
+        }
+        &-text-content1{
+            font-size: 1.2rem;
+        }
+   }
+   @media (max-width:1000px) {
+        &-text{
+            width: 90%;
+        }
+   }
+   @media (max-width:600px) {
+    &-text-head{
+        font-size: 1rem;
+    }
+    &-text-content{
+        font-size: 0.5rem;
+    }
+    &-text-content1{
+        font-size: 0.9rem;
+    }
+    .read-btn{
+        margin-top: 20px;
+    }
+    &-text-content1{
+        margin-top: 20px;
+    }
+ 
+}
+}
+@media (max-width:600px) {
+    .homecenter-con{
+        height: 400px;
+        margin-top: 170px;
     }
 }

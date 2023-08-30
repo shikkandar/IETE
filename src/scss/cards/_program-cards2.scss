@@ -96,6 +96,17 @@
     }
     .about-text{
         font-size: 12px;
+        line-height: 20px;
+    }
+  }
+  @media (max-width:450px) {
+    h2{
+        font-size: 16px;
+    }
+    .about-text{
+        font-size: 10px;
+        line-height: 20px;
+        line-height: 10px;
     }
   }
 }
@@ -165,4 +176,8 @@
     .content{
         min-height: 350px;
     }
+    .about-text{
+      font-size: 12px;
+      line-height: 5px;
+  }
 }

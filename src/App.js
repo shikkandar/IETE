@@ -1,18 +1,14 @@
 import {Routes,Route} from 'react-router-dom';
 import About from './component/about/about';
 import { Commitee } from './component/commitee/Commitee';
-import Others from './component/others';
-import { Placement } from './component/placement';
 import { Nomatch } from './component/nomathch';
-import { Featured } from './component/featured';
-import { New } from './component/new';
-import { UserDetails } from './component/UserDetails';
-import { Admin } from './component/Admin';
 import { useState,useEffect } from 'react';
 import ClipLoader from "react-spinners/ClipLoader";
 import { Home } from './component/home/Home';
 import { Event } from './component/event-pages/Event';
 import { Members } from './component/members/Members';
+import { Contact } from './component/contact/Contact';
+import { Chencon } from './component/chencon/Chencon';
 function App() {
   const[loading,setLoding]=useState(false)
   useEffect(()=>{
@@ -38,16 +34,9 @@ function App() {
       <Route path='/about' element={<About/>} />
       <Route path='/ExecutiveCommittee' element={<Commitee/>} />
       <Route path='/Events' element={<Event/>} />
-      <Route path='/Membership' element={<Members/>}>
-        <Route path=':userId' element={<UserDetails/>}/>
-        <Route path='admin' element={<Admin/>}/>
-      </Route>
-      <Route path='/Chencon' element={<Placement/>}>
-        <Route index element={<Featured/>}/>
-        <Route path='featured' element={<Featured/>}/>
-        <Route path='new' element={<New/>}/>
-      </Route>
-      <Route path='/Chenlink Newsletter' element={<Others/>} />
+      <Route path='/Membership' element={<Members/>}/>
+      <Route path='/Chencon' element={<Chencon/>}/>
+      <Route path='/Contact' element={<Contact/>} />
       <Route path='*' element={<Nomatch/>}/>
     </Routes>
       }

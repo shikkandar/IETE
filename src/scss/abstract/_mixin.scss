@@ -3,13 +3,13 @@
 @mixin drop{
     display: none;
     position: absolute;
-    background: $drop-color;
-    opacity: 0.9;
-    border-radius: 5px;
+    background: $primary-text-color;
+    border-radius: 10px;
     z-index: 999;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     left: 0;
-    padding: 0 10px 0 10px;
+    padding: 0 10px;
+
 }
 
 @mixin head-text{

@@ -10,7 +10,7 @@
         width: 30%;
     }
     &-2{
-        @extend .about-center-1;
+       width: 30%;
     }
     h2{
         font-family: $primary-text;
@@ -27,4 +27,39 @@
         font-family: $primary-text;
         font-weight: 900;
     }
+    
+}
+@media (max-width:1400px) {
+    .about-center{
+        &-1{
+            width: 45%;
+        }
+        &-2{
+            width: 45%;;
+        }
+    }
+}
+@media (max-width:900px) {
+    .about-center{
+     flex-direction: column;
+     align-items: center;
+      &-1{
+        width: 95%;
+      }
+      &-2{
+        width: 95%;
+      }
+    }
+}
+@media (max-width:600px) {
+    .about-center{
+     line-height: 25px;
+     h2{
+        font-size: 1.2rem;
+    }
+    &-c{
+        font-size: 0.8rem;
+    }
+    }
+    
 }

@@ -150,7 +150,6 @@
 }
 .homecenter-con-text {
   width: 50%;
-  height: 70%;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
@@ -178,15 +177,55 @@
 }
 .homecenter-con .read-btn {
   padding: 15px 30px;
-  position: absolute;
-  bottom: 50px;
+  position: relative;
+  bottom: 0px;
   border: none;
   border-radius: 10px;
   background-color: #fb8c00;
   font-weight: 900;
   color: #fff;
+  margin-top: 50px;
+}
+@media (max-width: 1400px) {
+  .homecenter-con-text-head {
+    font-size: 1.3rem;
+  }
+  .homecenter-con-text-content {
+    font-size: 0.7rem;
+  }
+  .homecenter-con-text-content1 {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 1000px) {
+  .homecenter-con-text {
+    width: 90%;
+  }
+}
+@media (max-width: 600px) {
+  .homecenter-con-text-head {
+    font-size: 1rem;
+  }
+  .homecenter-con-text-content {
+    font-size: 0.5rem;
+  }
+  .homecenter-con-text-content1 {
+    font-size: 0.9rem;
+  }
+  .homecenter-con .read-btn {
+    margin-top: 20px;
+  }
+  .homecenter-con-text-content1 {
+    margin-top: 20px;
+  }
 }
 
+@media (max-width: 600px) {
+  .homecenter-con {
+    height: 400px;
+    margin-top: 170px;
+  }
+}
 .program-cards-con {
   display: grid;
   grid-template-columns: repeat(4, 350px);

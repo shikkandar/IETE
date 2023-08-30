@@ -208,7 +208,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 200px;
 }
 .num-card .num-text {
   font-weight: 900;
@@ -365,6 +364,17 @@
   }
   .content .about-text {
     font-size: 12px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 450px) {
+  .content h2 {
+    font-size: 16px;
+  }
+  .content .about-text {
+    font-size: 10px;
+    line-height: 20px;
+    line-height: 10px;
   }
 }
 
@@ -396,6 +406,10 @@
 @media (max-width: 600px) {
   .content {
     min-height: 350px;
+  }
+  .about-text {
+    font-size: 12px;
+    line-height: 5px;
   }
 }
 .admissin-con {
@@ -452,7 +466,10 @@
        column-gap: 50px;
   line-height: 40px;
 }
-.about-center-1, .about-center-2 {
+.about-center-1 {
+  width: 30%;
+}
+.about-center-2 {
   width: 30%;
 }
 .about-center h2 {
@@ -471,6 +488,37 @@
   font-weight: 900;
 }
 
+@media (max-width: 1400px) {
+  .about-center-1 {
+    width: 45%;
+  }
+  .about-center-2 {
+    width: 45%;
+  }
+}
+@media (max-width: 900px) {
+  .about-center {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-center-1 {
+    width: 95%;
+  }
+  .about-center-2 {
+    width: 95%;
+  }
+}
+@media (max-width: 600px) {
+  .about-center {
+    line-height: 25px;
+  }
+  .about-center h2 {
+    font-size: 1.2rem;
+  }
+  .about-center-c {
+    font-size: 0.8rem;
+  }
+}
 .clg-con {
   width: 100%;
   display: flex;
@@ -532,4 +580,20 @@
 
 .homes-icon-text {
   text-transform: capitalize;
+}
+
+@media (max-width: 1200px) {
+  .icons-con {
+    grid-template-columns: repeat(2, 350px);
+  }
+}
+@media (max-width: 800px) {
+  .icons-con {
+    grid-template-columns: repeat(1, 0.7fr);
+  }
+}
+@media (max-width: 600px) {
+  .icons-con {
+    grid-template-columns: repeat(1, 0.9fr);
+  }
 }/*# sourceMappingURL=about.css.map */

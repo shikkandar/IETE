@@ -57,3 +57,18 @@
 .homes-icon-text{
     text-transform: capitalize;
 }
+@media (max-width:1200px) {
+    .icons-con{
+        grid-template-columns: repeat(2,350px);
+    }
+}
+@media (max-width:800px) {
+    .icons-con{
+        grid-template-columns: repeat(1,0.7fr);
+    }
+}
+@media (max-width:600px) {
+    .icons-con{
+        grid-template-columns: repeat(1,0.9fr);
+    }
+}

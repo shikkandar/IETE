@@ -55,7 +55,7 @@ export const AboutNum = () => {
 
   return (
     <div>
-      <div className="num-card-con-2" data-aos='slide-left' ref={countdownContainerRef}>
+      <div className="num-card-con-2" data-aos='slide-up' ref={countdownContainerRef}>
         <div className="num-card num-card-2">
           <div className="num-con">
             <div className="number-field-3" id="number7">

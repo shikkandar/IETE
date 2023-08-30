@@ -21,3 +21,22 @@
     font-size: 1.2rem;
     line-height: 25px;
 }
+@media (max-width:1000px) {
+    .head-text{
+        font-size: 1.8rem;
+    }
+    .content-text{
+        width: 95%;
+    }
+}
+@media (max-width:600px) {
+    .head-text{
+        font-size: 1.5rem;
+    }
+    .content-text{
+        font-size: 1rem;
+    }
+    .member-con{
+        margin-top: 100px;
+    }
+}

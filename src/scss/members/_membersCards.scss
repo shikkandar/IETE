@@ -8,11 +8,92 @@
    
     &1{
         width: 400px;
-        height: 500px;
+        min-height: 500px;
         box-shadow: $white-shadow;
         border-radius: 10px;
+        padding: 30px 20px;
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        font-family: $primary-text;
     }
     &-svg{
         width: 500px;
     }
+    &-svg-1{
+        display: none;
+    }
+    .mem-head{
+        color: $primary-text-color;
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+    .mem-con{
+        color: gray;
+        font-size: 1.1rem;
+        line-height: 40px;
+    }
+    .mem-con1{
+        text-indent: 70px;
+        color: gray;
+        font-size: 1.1rem;
+        line-height: 40px;
+    }
+    .mem-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+        font-size: 3rem;
+        .mem-button{
+            background-color: #ECF9F0;
+            width: 70px;
+            border-radius: 50%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: gray;
+            cursor: pointer;
+        }
+        .mem-button:hover{
+            color: #3e3d3d;
+        }
+    }
+    
+}
+@media (max-width:1200px) {
+    .members-con{
+        column-gap: 20px;
+        &-svg{
+            width: 400px;
+        }
+        &1{
+            width: 350px;
+            min-height: 450px;
+        }
+    }
+  
+}
+@media (max-width:800px) {
+    .members-con{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 40px;
+        &-svg-1{
+            display: block;
+        }
+        &-svg-2{
+            display: none;
+        }
+    }
+  
+}
+@media (max-width:500px) {
+    .members-con{
+        &1, &-svg{
+            width: 95%;
+        }
+    }
+  
 }

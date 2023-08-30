@@ -23,6 +23,25 @@
   line-height: 25px;
 }
 
+@media (max-width: 1000px) {
+  .head-text {
+    font-size: 1.8rem;
+  }
+  .content-text {
+    width: 95%;
+  }
+}
+@media (max-width: 600px) {
+  .head-text {
+    font-size: 1.5rem;
+  }
+  .content-text {
+    font-size: 1rem;
+  }
+  .member-con {
+    margin-top: 100px;
+  }
+}
 .members-con {
   width: 100%;
   display: flex;
@@ -33,10 +52,87 @@
 }
 .members-con1 {
   width: 400px;
-  height: 500px;
+  min-height: 500px;
   box-shadow: 10px 10px 20px rgb(229, 228, 228), -10px -10px 20px rgb(229, 228, 228);
   border-radius: 10px;
+  padding: 30px 20px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  font-family: "Belanosima", sans-serif;
 }
 .members-con-svg {
   width: 500px;
+}
+.members-con-svg-1 {
+  display: none;
+}
+.members-con .mem-head {
+  color: #001F4D;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.members-con .mem-con {
+  color: gray;
+  font-size: 1.1rem;
+  line-height: 40px;
+}
+.members-con .mem-con1 {
+  text-indent: 70px;
+  color: gray;
+  font-size: 1.1rem;
+  line-height: 40px;
+}
+.members-con .mem-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+.members-con .mem-btn .mem-button {
+  background-color: #ECF9F0;
+  width: 70px;
+  border-radius: 50%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+  cursor: pointer;
+}
+.members-con .mem-btn .mem-button:hover {
+  color: #3e3d3d;
+}
+
+@media (max-width: 1200px) {
+  .members-con {
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .members-con-svg {
+    width: 400px;
+  }
+  .members-con1 {
+    width: 350px;
+    min-height: 450px;
+  }
+}
+@media (max-width: 800px) {
+  .members-con {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+  }
+  .members-con-svg-1 {
+    display: block;
+  }
+  .members-con-svg-2 {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .members-con1, .members-con-svg {
+    width: 95%;
+  }
 }/*# sourceMappingURL=members.css.map */

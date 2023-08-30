@@ -20,7 +20,7 @@
   
   .program-cards-2 {
     width: 320px;
-    min-height: 400px;
+    min-height: 415px;
     border-radius: 10px;
     box-shadow: 5px 5px 20px rgb(211, 208, 208);
     display: flex;
@@ -63,7 +63,7 @@
             font-family: 'Ubuntu', sans-serif;
             color: gray;
             margin-top: 10px;
-            font-size: 16px;
+            font-size: 14px;
             width: 100%;
             padding-right: 10px;
             line-height: 25px;
@@ -79,11 +79,7 @@
     }
   }
   
-  .program-cards-2:hover {
-    // box-shadow:inset 1px 1px 20px rgb(255, 255, 255) ;
-    // transition-duration: 0.5s;
-    
-  }
+
  
   
   @media (max-width: 360px) {

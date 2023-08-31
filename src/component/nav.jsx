@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink,Link } from 'react-router-dom';
-
+import '../css/nav1.css'
 function Navbar() {
   // const navItem = ["Home", "About", "Committee", "Events", "Membership", "Chencon", "Newsletter", "Contact"];
   // const path = ["/", "/about", "/ExecutiveCommittee", "/Events", "/Membership", "/Chencon", "/Chenlink Newsletter", "/Contact"];

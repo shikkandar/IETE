@@ -198,10 +198,16 @@ body {
   .header-img {
     height: 50px;
   }
+  .navbar nav {
+    top: 80px;
+  }
 }
 @media (max-width: 600px) {
   .header-img {
     height: 40px;
+  }
+  .navbar nav {
+    top: 70px;
   }
 }
 @media (max-width: 480px) {
@@ -622,6 +628,10 @@ body {
   }
   .home-svg {
     height: 65vh;
+  }
+  .scroll-to-top-button {
+    right: 5%;
+    top: 95%;
   }
   .scroll-to-top-button svg {
     width: 35px;

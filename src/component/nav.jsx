@@ -65,7 +65,7 @@ useEffect(() => {
 
   return (
     <>
-    
+     
       <div className='navbar'>
         <a href='/'><img className='header-img' src='/img/logo1.jpg' alt='builders-logo'  onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave} /></a>

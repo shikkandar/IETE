@@ -19,6 +19,18 @@
     z-index: -1;
 
 }
+.scroll-to-top-button{
+    position: fixed;
+    top: 91%;
+    right: 1%;
+    z-index: 99999;
+    cursor: pointer;
+    svg{
+        fill: #F50057;
+        width: 50px;
+        height: 50px;
+    }
+  }
 @media (max-width:1600px) {
     .home-svg{
         height: 60vh;
@@ -40,6 +52,12 @@
     }
     .home-svg{
         height: 65vh;
+    }
+    .scroll-to-top-button{
+        svg{
+            width: 35px;
+            height: 35px;
+        }
     }
 }
 @media (max-width:450px) {

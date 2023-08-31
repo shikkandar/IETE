@@ -44,10 +44,11 @@ export const HomeSvg = () => {
               30<br />May
             </div>
             <div className="webinar-text-event" >
-              <a href="http://www.ietechennai.in/specialseminar.html">
+              <a href="/Events">
                 Webinar on IoT Security<br />
                 (WISE-2022) organized by SETS Chennai & C-DAC Hyderabad in collaboration with ISEA
               </a>
+              <link rel="stylesheet" href="" ></link>
             </div>
           </div>
         </div>

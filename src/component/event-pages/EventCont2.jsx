@@ -20,9 +20,9 @@ export const EventCon2 = () => {
              "International Conference on Power of Artificial Intelligence and Machine Learning for Human Empowerment"
         </div>
         <div className="btn-collection" >
-            <button className='btn-blue'>Pdf Brochure</button>
-            <button className='btn-blue'>Inaugural Session Programme</button>
-            <button className='btn-blue'>ChenCon 2022 Proceedings</button>
+            <button className='btn-blue' data-aos='zoom-in-up'>Pdf Brochure</button>
+            <button className='btn-blue' data-aos='zoom-in-up'>Inaugural Session Programme</button>
+            <button className='btn-blue' data-aos='zoom-in-up'>ChenCon 2022 Proceedings</button>
         </div>
         <div className="line"></div>
         <img className='event-img' src="/img/bacgroung/chencon2022.jpeg" alt="img" data-aos='zoom-in-up' / >

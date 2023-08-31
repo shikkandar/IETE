@@ -53,13 +53,13 @@
     }
     .heart2{
         @include round;
-        top: 5%;
+        top: 45%;
         left: 50%;
     }
     .star1{
         @include round;
         top: 100%;
-        left: 97%;
+        left: 85%;
     }
     .music{
         @include round;
@@ -71,10 +71,9 @@
         bottom: 0;
         left: 50%;
     }
-    &1{
+    @mixin mem-card{
         width: 400px;
         min-height: 500px;
-        box-shadow: $white-shadow;
         border-radius: 10px;
         padding: 30px 20px;
         text-align: start;
@@ -82,6 +81,22 @@
         flex-direction: column;
         row-gap: 20px;
         font-family: $primary-text;
+    }
+    &1{
+        @include mem-card;
+        background-color: #00BFA6;
+    }
+    &2{
+        @include mem-card;
+        background-color: #F50057;
+    }
+    &3{
+        @include mem-card;
+        background-color: #F9A826;
+    }
+    &4{
+        @include mem-card;
+        background-color: #53FE57;
     }
     &-svg{
         width: 500px;
@@ -96,18 +111,18 @@
         display: none;
     }
     .mem-head{
-        color: $primary-text-color;
+        color: #2F2E41;
         font-size: 1.5rem;
         font-weight: 900;
     }
     .mem-con{
-        color: gray;
+        color: #fff;
         font-size: 1.1rem;
         line-height: 40px;
     }
     .mem-con1{
         text-indent: 70px;
-        color: gray;
+        color: #fff;
         font-size: 1.1rem;
         line-height: 40px;
     }
@@ -115,12 +130,12 @@
         display: flex;
         justify-content: center;
         align-items: center;    
-        font-size: 3rem;
+        font-size: 2rem;
         .mem-button{
             background-color: #ECF9F0;
-            width: 70px;
+            width: 50px;
             border-radius: 50%;
-            height: 70px;
+            height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -133,13 +148,14 @@
     }
     
 }
+
 @media (max-width:1200px) {
     .members-con{
         column-gap: 20px;
         &-svg{
             width: 400px;
         }
-        &1{
+        &1,&2,&3,&4{
             width: 350px;
             min-height: 450px;
         }
@@ -162,8 +178,8 @@
 }
 @media (max-width:500px) {
     .members-con{
-        &1, &-svg{
-            width: 95%;
+        &1,&2,&3,&4, &-svg{
+            width: 90%;
         }
     }
   

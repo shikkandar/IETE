@@ -1,8 +1,10 @@
+@use './nav/nav1';
 @use './abstract/universal';
 @use "./abstract/mixin" as *;
 @use "./home/home-main-con";
 @use "./home/home-center" as *;
 @use "./home/home-cars" as *;
+
 
 .home-svg{
     z-index: 1;

@@ -49,6 +49,149 @@
   -moz-column-gap: 150px;
        column-gap: 150px;
   margin-top: 50px;
+  position: relative;
+}
+.members-con .round1 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 30%;
+  animation: rotate 5s linear infinite;
+  top: 0;
+  left: 10%;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.members-con .round2 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 30%;
+  animation: rotate 5s linear infinite;
+  bottom: 0;
+  left: 50%;
+  border: 3px solid blue;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.members-con .round3 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 30%;
+  animation: rotate 5s linear infinite;
+  top: 10%;
+  left: 90%;
+  border: 3px solid chartreuse;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.members-con .hexagon1 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 30%;
+  animation: rotate 5s linear infinite;
+  top: 30%;
+  left: 20%;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.members-con .hexagon2 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 30%;
+  animation: rotate 5s linear infinite;
+  top: 60%;
+  left: 80%;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.members-con .heart1 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 30%;
+  animation: rotate 5s linear infinite;
+  top: 100%;
+  left: 2%;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.members-con .heart2 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 30%;
+  animation: rotate 5s linear infinite;
+  top: 5%;
+  left: 50%;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.members-con .star1 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 30%;
+  animation: rotate 5s linear infinite;
+  top: 100%;
+  left: 97%;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.members-con .music {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 30%;
+  animation: rotate 5s linear infinite;
+  top: 85%;
+  left: 18%;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.members-con .play {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 30%;
+  animation: rotate 5s linear infinite;
+  bottom: 0;
+  left: 50%;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .members-con1 {
   width: 400px;
@@ -64,6 +207,12 @@
 }
 .members-con-svg {
   width: 500px;
+  animation: jump 1s ease infinite alternate;
+}
+@keyframes jump {
+  100% {
+    transform: translateY(-25px);
+  }
 }
 .members-con-svg-1 {
   display: none;

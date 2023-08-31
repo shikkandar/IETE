@@ -13,7 +13,8 @@
     display: flex;
     flex-direction: column;
     row-gap:30px ;
-    background-color: rgb(244, 241, 241);
+    background-color: rgb(255, 255, 255);
+    box-shadow: $white-shadow;
     padding: 40px 60px;
     border-radius: 10px;
     font-family: $primary-text;
@@ -21,21 +22,25 @@
         color: $primary-text-color;
         font-size: 1.5rem;
         font-weight: 900;
+        text-align: center;
     }
     &-orange{
         color: $primary-text-color-hover;
         font-size: 1.3rem;
         font-weight: 700;
+        text-align: center;
         &-text{
             color: $form-blue;
             font-size: 1.3rem;
             font-weight: 700;
+            text-align: center;
         }
     }
     &-gray{
         color: gray;
         font-size: 1.3rem;
         font-weight: 700;
+        text-align: center;
     }
     &-gray-1{
         color: gray;
@@ -43,6 +48,7 @@
         font-weight: 400;
         line-height: 35px;
         text-indent: 50px;
+        text-align: center;
     }
     &-blue{
         color: rgb(50, 171, 231);
@@ -50,6 +56,7 @@
         font-weight: 400;
         line-height: 35px;
         text-indent: 50px;
+        text-align: center;
         &:hover{
             color: rgb(42, 143, 194);
             font-size: 1rem;
@@ -60,6 +67,7 @@
     }
     &-normal{
         font-size: 1.2rem;
+        text-align: center;
     
     }
    &-scope{
@@ -78,15 +86,22 @@
         font-size: 1.3rem;
         color: $primary-text-color;
         font-weight: 900;
+        display: flex;
+        flex-direction: column; 
+       
+        
 
         &-ul{
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(3,0.3fr);
             width: 100%;
-            justify-content: space-around;
-            line-height: 30px;
+            line-height: 40px;
             margin-top: 10px;
             font-size: 1rem;
             font-weight: 400;
+            align-items: center;
+            justify-content: space-around;
+           
             color: gray ;
             li{
                 list-style: none;
@@ -125,8 +140,132 @@
     background-color: gray;
 }
 .event-img{
-    width: 65%;
+    width: 800px;
     height: 500px;
     border-radius: 10px;
     border: 2px solid rgb(180, 178, 178);
+}
+@media (max-width:1400px) {
+    .event2-con1{
+        width: 85%;
+    }
+
+}
+@media (max-width:1200px) {
+    .event2-con1{
+        width: 95%;
+        &-ulcon{
+            &-ul{
+                grid-template-columns: repeat(2,1fr);
+                row-gap: 10px;
+                column-gap: 10px;
+            }
+            ul{
+                border: 1px solid gray;
+                padding: 5px;
+            }
+        }
+    }
+   
+}
+@media (max-width:900px) {
+    .event2-con1{
+        width: 95%;
+        &-table{
+            table{
+               width:100%;
+            }
+            td{
+               text-align: center;
+               line-height: 20px;
+            }
+}
+    }
+    .event-img{
+        width: 90%;
+        height: 350px;
+      
+    }
+    .btn-collection{
+       flex-direction: column;
+       row-gap: 20px;
+       width: 70%;
+    }
+}
+@media (max-width:700px) {
+    .event2-con1{
+        row-gap: 10px;
+        padding: 10px 20px;
+        &-gray-1{
+            line-height: 20px;
+        }
+        &-ulcon{
+            &-ul{
+                grid-template-columns: repeat(1,1fr);
+                row-gap: 10px;
+                column-gap: 10px;
+                line-height: 25px;
+            }
+        }
+        &-table{
+            th,td{
+              
+               font-size: 0.7rem;
+            }
+        }
+    }
+    .event-img{
+        width: 100%;
+        
+    }
+}
+@media (max-width:600px) {
+    .event-img{
+        width: 100%;
+        height: 300px;
+    }
+    .event2-con1{
+        &-table{
+
+            td{
+               text-align: center;
+               line-height: 15px;
+            }
+        }
+        &-bold{
+            font-size: 1rem;
+        }
+        &-gray{
+            font-size: 0.8rem;
+        }
+        &-gray-1{
+            font-size: 0.8rem;
+        }
+        &-normal{
+            font-size: 0.7rem;
+        }
+        &-blue{
+            font-size: .7rem;
+        }
+    }
+    .btn-blue{
+        font-size: 0.6rem;   
+    }
+}
+@media (max-width:600px) {
+    .event-img{
+        width: 100%;
+        height: 200px;
+    }
+    .event2-con1{
+        &-table{
+            
+            td{
+               text-align: center;
+               line-height: 10px;
+               padding: 3px;
+            }
+        }
+    }
+    
 }

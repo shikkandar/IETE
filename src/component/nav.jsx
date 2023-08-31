@@ -75,10 +75,10 @@ useEffect(() => {
               <li className='Home' key={0} onClick={refreshPage}>
                 <NavLink id='navLinks'style={navLinkActive} to='/Membership'>Membership</NavLink>
               </li>
-              <li className='Home' key={0} onClick={refreshPage}>
+              <li className='Home' key={0} >
               <Link id='navLinks' to='#'>Chencon</Link>
                 <ul class="Comitee">
-                    <li style={{borderTop:"none" }}>
+                    <li style={{borderTop:"none" }} onClick={refreshPage}>
                       <NavLink to='/Chencon'>2022</NavLink>
                     </li>
                     <li>

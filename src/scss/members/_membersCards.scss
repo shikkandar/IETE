@@ -5,7 +5,72 @@
     justify-content: center;
     column-gap: 150px;
     margin-top: 50px;
-   
+    position: relative;
+    @mixin round{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        border-radius: 30%;
+        animation: rotate 5s linear  infinite  ;
+        @keyframes rotate {
+            100%{
+                transform: rotate(360deg)
+            }
+        }
+    }
+   .round1{
+        @include round;
+        top: 0;
+        left: 10%;
+   }
+   .round2{
+        @include round;
+        bottom: 0;
+        left: 50%;
+        border:3px solid blue;
+  
+   }
+   .round3{
+        @include round;
+        top: 10%;
+        left: 90%;
+        border:3px solid chartreuse;
+   }
+   .hexagon1{
+        @include round;
+        top: 30%;
+        left: 20%;
+    }
+   .hexagon2{
+        @include round;
+        top: 60%;
+        left: 80%;
+    }
+   .heart1{
+        @include round;
+        top: 100%;
+        left: 2%;
+    }
+    .heart2{
+        @include round;
+        top: 5%;
+        left: 50%;
+    }
+    .star1{
+        @include round;
+        top: 100%;
+        left: 97%;
+    }
+    .music{
+        @include round;
+        top: 85%;
+        left: 18%;
+    }
+    .play{
+        @include round;
+        bottom: 0;
+        left: 50%;
+    }
     &1{
         width: 400px;
         min-height: 500px;
@@ -20,6 +85,12 @@
     }
     &-svg{
         width: 500px;
+        animation: jump 1s ease  infinite alternate ;
+    }
+    @keyframes jump {
+        100%{
+            transform: translateY(-25px);
+        }
     }
     &-svg-1{
         display: none;

@@ -37,12 +37,12 @@ export const EventCon2 = () => {
         </div>
          </div>
          <div className="line"></div>
-         <div className="event2-con1-ulcon" data-aos='zoom-in-up'>
-            <div className="ul-head">
+         <div className="event2-con1-ulcon" >
+            <div className="ul-head" data-aos='zoom-in-up'>
               Track - 1: AI Enabled Technologies
             </div>
               <div className="event2-con1-ulcon-ul">
-                  <ul>
+                  <ul data-aos='zoom-in-up'>
                       <li>&#x2714; Advanced Robotics</li>
                       <li>&#x2714; Intelligent Drones and UAVs</li>
                       <li>&#x2714; Natural Language Processing</li>
@@ -50,7 +50,7 @@ export const EventCon2 = () => {
                       <li>&#x2714; Image Processing</li>
                   </ul>
 
-                  <ul>
+                  <ul data-aos='zoom-in-up'>
                       <li>&#x2714; Conversational Systems</li>
                       <li>&#x2714; Image Analysis</li>
                       <li>&#x2714; Computer Vision</li>
@@ -58,7 +58,7 @@ export const EventCon2 = () => {
                       <li>&#x2714; Object Recognition</li>
                   </ul>
 
-                  <ul>
+                  <ul data-aos='zoom-in-up'>
                       <li>&#x2714; Document Analysis</li>
                       <li>&#x2714; Earth Observation and Visualization</li>
                       <li>&#x2714; Weather and Climate Prediction</li>
@@ -67,12 +67,12 @@ export const EventCon2 = () => {
                   </ul>
                 </div>
          </div>
-         <div className="event2-con1-ulcon" data-aos='zoom-in-up'>
+         <div className="event2-con1-ulcon" >
             <div className="ul-head" data-aos='zoom-in-up'>
                 Track - 2: AI/ML Infrastructure
             </div>
               <div className="event2-con1-ulcon-ul">
-                  <ul>
+                  <ul data-aos='zoom-in-up' >
                       <li>&#x2714; Enhanced data visualization</li>
                       <li>&#x2714; Data preparation</li>
                       <li>&#x2714; Data labeling</li>
@@ -80,7 +80,8 @@ export const EventCon2 = () => {
                       <li>&#x2714; Edge devices</li>
                       
                   </ul>
-                  <ul>
+                  
+                  <ul data-aos='zoom-in-up'>
                       <li>&#x2714; Cloud ML platform</li>
                       <li>&#x2714; Digital health and well being</li>
                       <li>&#x2714; Prediction/ Detection of diseases</li>
@@ -88,7 +89,7 @@ export const EventCon2 = () => {
                       <li>&#x2714; 3D imaging and sensing</li>
                       
                   </ul>
-                  <ul>
+                  <ul data-aos='zoom-in-up'   >
                      <li>&#x2714; ML/AI for autonomous systems</li>
                       <li>&#x2714; AI and ML for Healthcare</li>
                       <li>&#x2714; AI and ML Pandemic tracking</li>
@@ -97,23 +98,23 @@ export const EventCon2 = () => {
                   </ul>
 
                 </div>
-         </div>
-         <div className="event2-con1-ulcon" data-aos='zoom-in-up'>
+            </div>
+         <div className="event2-con1-ulcon" >
             <div className="ul-head">
             Track - 3: Emerging Applications of Al in Communication
             </div>
               <div className="event2-con1-ulcon-ul">
-                    <ul>
+                    <ul data-aos='zoom-in-up'>
                         <li>&#x2714; AI/ML in the PHY Layer</li>
                         <li>&#x2714; AI and machine learning for 5G</li>
                         <li>&#x2714; Propagation at mm Waves and THertz</li>
                         <li>&#x2714; Beyond 5G & 6G communications</li>
                         <li>&#x2714; New modulation and coding techniques</li>
                        
-                    </ul>
+                    </ul >
 
 
-                  <ul>
+                  <ul data-aos='zoom-in-up'>
                         <li>&#x2714; Antenna array processing</li>
                         <li>&#x2714; AI/ML for wireless/optical/satellite networks</li>
                         <li>&#x2714; Reconfigurable Intelligent Surfaces</li>
@@ -122,7 +123,7 @@ export const EventCon2 = () => {
                        
                   </ul>
 
-                  <ul>
+                  <ul data-aos='zoom-in-up'>
                         <li>&#x2714; Mobility Analytics</li>
                         <li>&#x2714; Smart Communications</li>
                         <li>&#x2714; MIMO and Multi-antenna Beamforming</li>
@@ -131,12 +132,12 @@ export const EventCon2 = () => {
                   </ul>
                 </div>
          </div>
-         <div className="event2-con1-ulcon" data-aos='zoom-in-up'>
-            <div className="ul-head">
+         <div className="event2-con1-ulcon">
+            <div className="ul-head" data-aos='zoom-in-up'>
                   Track - 4: Industry Applications of AI
             </div>
               <div className="event2-con1-ulcon-ul">
-                    <ul>
+                    <ul data-aos='zoom-in-up' >
                         <li>&#x2714; Factory automation</li>
                         <li>&#x2714; Autonomous driving and V2X</li>
                         <li>&#x2714; Internet of Things Analytics</li>
@@ -146,7 +147,7 @@ export const EventCon2 = () => {
                     </ul>
 
 
-                  <ul>
+                  <ul data-aos='zoom-in-up'>
                         <li>&#x2714; Smart farming environments</li>
                         <li>&#x2714; Quantum Computing</li>
                         <li>&#x2714; Cybersecurity</li>
@@ -155,7 +156,7 @@ export const EventCon2 = () => {
                        
                   </ul>
 
-                  <ul>
+                  <ul data-aos='zoom-in-up'>
                         <li>&#x2714; Industry 4.0</li>
                         <li>&#x2714; Underwater Technologies</li>
                         <li>&#x2714; 6G, Augmented /Virtual Reality</li>

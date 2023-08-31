@@ -134,14 +134,17 @@ body {
   }
   .navbar nav ul li a {
     color: black;
-    background-color: transparent;
   }
   .navbar nav ul li ul {
     position: relative;
     width: 100%;
   }
   .navbar nav ul li ul li {
-    background: #eee;
+    background: #fff;
+  }
+  .navbar nav ul li ul li a {
+    background: #fff;
+    color: #012a68;
   }
   .navbar nav ul li ul li ul {
     left: 0;
@@ -154,18 +157,6 @@ body {
   .navbar nav ul li ul li .Comitee {
     left: 0;
     width: 200px;
-  }
-  .navbar nav ul li ul li .departement {
-    left: 0;
-    width: 100%;
-  }
-  .navbar nav ul li ul li .other {
-    left: 0px;
-    width: 100%;
-  }
-  .navbar nav ul li .others {
-    left: 0px;
-    width: 100%;
   }
 }
 @media (max-width: 800px) {

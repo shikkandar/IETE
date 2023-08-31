@@ -7,14 +7,15 @@
     justify-content: center;
 }
 .Event-con1{
-    margin-top: 200px;
+    margin-top: 150px;
     width: 70%;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
     row-gap:30px ;
-    background-color: rgb(244, 241, 241);
+    background-color: rgb(255, 255, 255);
+    box-shadow: $white-shadow;
     padding: 40px 60px;
     border-radius: 10px;
 }
@@ -23,6 +24,7 @@
     font-size: 1.2rem;
     font-weight: 400;
     font-family: $primary-text;
+    text-align: center;
 }
 
 .Event-con1-text:nth-child(1){
@@ -37,4 +39,36 @@
 }
 .event-btn{
    @include btn;
+}
+@media (max-width:1400px) {
+    .Event-con1{
+        width: 85%;
+    }
+}
+@media (max-width:1200px) {
+    .Event-con1{
+        width: 95%;
+        margin-top: 120px;
+    }
+}
+@media (max-width:700px) {
+    .Event-con1{
+        row-gap: 15px;
+    }
+    .Event-con1-text{
+        font-size: 0.8rem;
+    }
+    
+    .Event-con1-text:nth-child(1){
+        font-size: 1.2rem;
+    }
+    .Event-con1-text:nth-child(2){
+        font-size: 0.8rem;
+    }
+}
+@media (max-width:600px) {
+    .Event-con1{
+        margin-top: 80px;
+    }
+    
 }

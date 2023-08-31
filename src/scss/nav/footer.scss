@@ -163,6 +163,10 @@ a{
 @media (max-width:1000px) {
     .footer-con{
         flex-direction: column;
+        justify-content: start;
+        .address-info:nth-child(2){
+            width: 281.28px;
+        }
     }
 }
 @media (max-width:600px) {
@@ -174,10 +178,12 @@ a{
     }
     .footer-con{
         padding: 50px 30px 20px 30px;
-    }
-    .footer-con{
         margin-top: 100px;
+        .address-info:nth-child(2){
+            width: 246.13px;
+        }
     }
+   
 }
 @media (max-width:430px) {
     .footer-img{

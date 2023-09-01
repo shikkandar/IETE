@@ -20,9 +20,9 @@ export const EventCon2 = () => {
              "International Conference on Power of Artificial Intelligence and Machine Learning for Human Empowerment"
         </div>
         <div className="btn-collection" >
-            <button className='btn-blue'>Pdf Brochure</button>
-            <button className='btn-blue'>Inaugural Session Programme</button>
-            <button className='btn-blue'>ChenCon 2022 Proceedings</button>
+            <button className='btn-blue'><a target='_blank' href='http://ietechennai.in/assets/pdf/CHENCON2022.pdf'>Pdf Brochure</a></button>
+            <button className='btn-blue'><a target='_blank' href='http://ietechennai.in/assets/pdf/chencon_invitation.pdf'>Inaugural Session Programme</a></button>
+            <button className='btn-blue'><a target='_blank' href='http://ietechennai.in/assets/pdf/chencon2022_proceedings.pdf'>ChenCon 2022 Proceedings</a></button>
         </div>
         <div className="line"></div>
         <img className='event-img' src="/img/bacgroung/chencon2022.jpeg" alt="img" data-aos='zoom-in-up' / >
@@ -179,7 +179,7 @@ export const EventCon2 = () => {
                     Accepted and registered papers of IETE CHENCON 2022 will be published in the conference proceedings.
                     Extended versions of the accepted and presented papers will be recommended
                     for publication in IETE Journals, SCOPUS, SCI and other indexed journals.
-                    Authors must submit the papers through their Easy chair account using the following link: <a className='event2-con1-blue' href='https://easychair.org/conferences/?conf=ietechencon2022'>https://easychair.org/conferences/?conf=ietechencon2022</a> or submit the papers to
+                    Authors must submit the papers through their Easy chair account using the following link: <a target='_blank' className='event2-con1-blue' href='https://easychair.org/conferences/?conf=ietechencon2022'>https://easychair.org/conferences/?conf=ietechencon2022</a> or submit the papers to
                     the Email ID: <span className='event2-con1-blue'>chencon2022@gmail.com</span>
 
         </div>
@@ -249,7 +249,6 @@ export const EventCon2 = () => {
                         Dr. K. Jaya Shankar<br/>
                         Col. (Retd) K.S. Chakravarthi<br/>
                         Shri. S. Ramaswamy<br/>
-                        Dr. Swarna Ravindra Babu<br/>
                         Dr. Tata Sudhakar
                     </div>
                       
@@ -261,7 +260,7 @@ export const EventCon2 = () => {
                           Mobile: 72000 96048<br/>
                           Phone: 044-28350773<br/>
                           Email: <span className='event2-con1-blue'>chencon2021@gmail.com</span><br/>
-                          Website: <a className='event2-con1-blue' href='http://ietechennai.in'>http://ietechennai.in</a>
+                          Website: <a target='_blank' className='event2-con1-blue' href='/'>http://ietechennai.in</a>
                       </div>
                   </td>
                 </tr>

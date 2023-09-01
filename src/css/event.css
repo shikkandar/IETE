@@ -229,6 +229,10 @@
   background: linear-gradient(117deg, rgb(13, 13, 184) 0%, rgb(9, 9, 106) 19%);
   color: #edebeb;
 }
+.btn-blue a {
+  font-size: 0.8rem;
+  color: aliceblue;
+}
 
 .line {
   width: 100%;

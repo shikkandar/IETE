@@ -100,7 +100,7 @@
         font-size: 1.5rem;
         font-weight: 900;
     }
-    .mem-con{
+    .mem-con {
         color: gray;
         font-size: 1.1rem;
         line-height: 40px;
@@ -126,6 +126,10 @@
             justify-content: center;
             color: gray;
             cursor: pointer;
+            padding-bottom: 10%;
+            padding-left: 5%;
+            font-size: 3rem;
+            
         }
         .mem-button:hover{
             color: #3e3d3d;

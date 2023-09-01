@@ -133,6 +133,11 @@
 }
 .btn-blue{
     @include btn;   
+    a{ 
+        font-size: .8rem;
+        color: aliceblue;
+    }
+   
 }
 .line{
     width: 100%;

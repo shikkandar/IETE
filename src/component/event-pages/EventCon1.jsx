@@ -23,7 +23,7 @@ export const EventCon1 = () => {
           All interested members are requested to register at the following link to participate in the webinar
       </div>
       <button className='event-btn' data-aos='slide-left'>
-          Weblink
+          <a href='https://infosecawareness.in/wise2022'>Weblink</a>
       </button>
       <div className="Event-con1-text" data-aos='slide-right'>
           Participation certificate will be issued to all the registered participants after attending all the sessions.

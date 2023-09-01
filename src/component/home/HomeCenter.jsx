@@ -8,7 +8,7 @@ export const HomeCenter = () => {
       }, []);
   return (
     <div className='homecenter-con'>
-       <div className="homecenter-con-text" data-aos="slide-up">
+       <div className="homecenter-con-text" data-aos="zoom-in-up">
             <div className="homecenter-con-text-head">
                 "INNOVATION FOR THE PEOPLE AND BY THE PEOPLE IS THE REACTION OF OUR NEW INDIA"
             </div>

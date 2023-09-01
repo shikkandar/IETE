@@ -2,7 +2,9 @@ import '../../css/home.css';
 import { HomeSvg } from './HomeSvg';
 import { HomeCenter } from './HomeCenter';
 import { HomeCards } from './HomeCards';
+import '../../css/nav1.css'
 export const Home = () => {
+
   return (
     
         <div >
@@ -14,6 +16,7 @@ export const Home = () => {
           <HomeSvg/>
           <HomeCenter/> 
           <HomeCards/>
+         
         </div>
     
   )

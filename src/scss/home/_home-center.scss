@@ -1,6 +1,5 @@
 @use '../abstract/color' as *;
 .homecenter-con{
-    height: 100vh;
     width: 100%;
     background-image: url('../../public/img/bacgroung/rainbow-vortex.svg');
     background-repeat: no-repeat;
@@ -11,11 +10,11 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    &-text{
+    &-text{ 
         width: 40%;
         border-radius: 10px;
         border-radius: 20px;
-        background-color:rgb(241, 237, 237,0.5);
+        background-color:rgb(241, 237, 237,0.8);
         backdrop-filter: blur(30px);
         padding: 20px 40px;
        
@@ -26,16 +25,19 @@
         font-family: $primary-text;
         font-weight: 900;
         color: $primary-text-color;
+        
     }
     &-text-content{
         font-size: 1rem;
         text-align: right;
         color: rgb(255, 245, 245);
+        font-family: $primary-text;
     }
     &-text-content1{
         font-size: 1.5rem;
         margin-top: 50px;
         text-indent: 50px;
+        font-family: $primary-text;
     }
     .read-btn{
         padding: 15px 30px;
@@ -43,10 +45,11 @@
         bottom:0px;
         border: none;
         border-radius: 10px;
-        background-color: $primary-text-color-hover;
+        background-color: #512DA8;
         font-weight: 900;
         color: #fff;
         margin-top: 50px;
+        font-family: $primary-text;
     }
    @media (max-width:1400px) {
         &-text-head{

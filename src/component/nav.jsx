@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink,Link } from 'react-router-dom';
-import '../css/nav1.css';
-
+import '../css/nav1.css'
 function Navbar() {
   // const navItem = ["Home", "About", "Committee", "Events", "Membership", "Chencon", "Newsletter", "Contact"];
   // const path = ["/", "/about", "/ExecutiveCommittee", "/Events", "/Membership", "/Chencon", "/Chenlink Newsletter", "/Contact"];
@@ -48,12 +47,29 @@ useEffect(() => {
     if (window.innerWidth < 1000) {
       window.location.reload();
     }
-   
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Adds smooth scrolling animation
+    });
   };
+ 
+  const [showIeteObb, setShowIeteObb] = useState(false);
+
+  const handleMouseEnter = () => {
+    setShowIeteObb(true);
+  };
+
+  const handleMouseLeave = () => {
+    setShowIeteObb(false);
+  };
+
   return (
     <>
+     
       <div className='navbar'>
-        <a href='/'><img className='header-img' src='/img/logo1.jpg' alt='builders-logo' /></a>
+        <a href='/'><img className='header-img' src='/img/logo1.jpg' alt='builders-logo'  onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave} /></a>
+       
         <input type="checkbox" id="menu-bar" />
         <label htmlFor="menu-bar" className="checkbtn">
           <svg  className='toggle-btn' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" /></svg>
@@ -108,8 +124,18 @@ useEffect(() => {
           </ul>
         </nav>
       </div>
+      {showIeteObb && (
+          <div className="iete-obb">
+            The Institution of Electronics and Telecommunication Engineers, Chennai
+            <div className="traiangle">
+            <div className="traiangle1"></div>
+            </div>
+           
+          </div>
+        )}
+    
     </>
   );
-}
+  }
 
 export default Navbar;

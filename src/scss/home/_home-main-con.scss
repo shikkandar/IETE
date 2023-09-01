@@ -129,6 +129,13 @@
    row-gap: 20px;
    top: 15vh;
  }
+ .webinar-text{
+    &-event{
+        a{
+            font-size: 0.8rem;
+        }
+    }
+}   
 }
 @media (max-width:450px) {
     .webinar-text{

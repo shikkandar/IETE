@@ -143,7 +143,7 @@
   position: absolute;
   border-radius: 30%;
   animation: rotate 5s linear infinite;
-  top: 5%;
+  top: 45%;
   left: 50%;
 }
 @keyframes rotate {
@@ -158,7 +158,7 @@
   border-radius: 30%;
   animation: rotate 5s linear infinite;
   top: 100%;
-  left: 97%;
+  left: 85%;
 }
 @keyframes rotate {
   100% {
@@ -196,7 +196,6 @@
 .members-con1 {
   width: 400px;
   min-height: 500px;
-  box-shadow: 10px 10px 20px rgb(229, 228, 228), -10px -10px 20px rgb(229, 228, 228);
   border-radius: 10px;
   padding: 30px 20px;
   text-align: start;
@@ -204,6 +203,43 @@
   flex-direction: column;
   row-gap: 20px;
   font-family: "Belanosima", sans-serif;
+  background-color: #00BFA6;
+}
+.members-con2 {
+  width: 400px;
+  min-height: 500px;
+  border-radius: 10px;
+  padding: 30px 20px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  font-family: "Belanosima", sans-serif;
+  background-color: #F50057;
+}
+.members-con3 {
+  width: 400px;
+  min-height: 500px;
+  border-radius: 10px;
+  padding: 30px 20px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  font-family: "Belanosima", sans-serif;
+  background-color: #F9A826;
+}
+.members-con4 {
+  width: 400px;
+  min-height: 500px;
+  border-radius: 10px;
+  padding: 30px 20px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  font-family: "Belanosima", sans-serif;
+  background-color: #53FE57;
 }
 .members-con-svg {
   width: 500px;
@@ -218,18 +254,18 @@
   display: none;
 }
 .members-con .mem-head {
-  color: #001F4D;
+  color: #2F2E41;
   font-size: 1.5rem;
   font-weight: 900;
 }
 .members-con .mem-con {
-  color: gray;
+  color: #fff;
   font-size: 1.1rem;
   line-height: 40px;
 }
 .members-con .mem-con1 {
   text-indent: 70px;
-  color: gray;
+  color: #fff;
   font-size: 1.1rem;
   line-height: 40px;
 }
@@ -237,13 +273,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .members-con .mem-btn .mem-button {
   background-color: #ECF9F0;
-  width: 70px;
+  width: 50px;
   border-radius: 50%;
-  height: 70px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -265,7 +301,7 @@
   .members-con-svg {
     width: 400px;
   }
-  .members-con1 {
+  .members-con1, .members-con2, .members-con3, .members-con4 {
     width: 350px;
     min-height: 450px;
   }
@@ -284,7 +320,7 @@
   }
 }
 @media (max-width: 500px) {
-  .members-con1, .members-con-svg {
-    width: 95%;
+  .members-con1, .members-con2, .members-con3, .members-con4, .members-con-svg {
+    width: 90%;
   }
 }/*# sourceMappingURL=members.css.map */

@@ -16,6 +16,7 @@
     margin-top: 50px;
     row-gap: 40px;
     
+    
   }
   
   .program-cards-2 {
@@ -25,32 +26,30 @@
     box-shadow: 5px 5px 20px rgb(211, 208, 208);
     display: flex;
     flex-direction: column;
-   
+    background-color: rgba(21, 162, 5, 0.069);
     cursor: pointer;
     transition: transform 0.3s ease;
     .p-c-img-2{
         width: 100%;
-        height: 200px;
+        height: 170px;
         justify-content: center;
         align-items: center;
         display: flex;
        
         .explore-images-2{
-            width:180px;
-            height: 180px;
+            width:150px;
+            height: 150px;
             border-radius: 50%;
             border: 3px solid gray;
          
         }
        
     }
-    .program-cards-2:hover{
-       border:5px solid $primary-text-color-hover ;
-    }
+  
     .program-line-2{
         width: 100%;
-        height: 5px;
-        background-color: $primary-text-color-hover;
+        height: 2px;
+        background-color:  rgb(41, 201, 24);
     }
     .p-c-info-2{
         padding: 20px 10px;
@@ -79,7 +78,9 @@
         }
     }
   }
-  
+  .program-cards-2:hover{
+    border: 1px solid rgb(41, 201, 24);
+  }
 
  
   

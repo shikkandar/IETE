@@ -135,7 +135,8 @@
     @include btn;   
     a{ 
         font-size: .8rem;
-        color: aliceblue;
+        color: #fff;
+        font-family: $primary-text ;    
     }
    
 }

@@ -107,17 +107,19 @@
   
   @media (max-width: 800px) {
     .program-cards-con-2 {
-      grid-template-columns: repeat(1, 320px);
+      grid-template-columns: repeat(1, 350px);
+    }
+    .program-cards-2 {
+      width: 100%;
     }
   }
-  @media (max-width: 320px) {
-    .program-cards-con-2 {
-      grid-template-columns: repeat(1,90%);
-      
-    }
-    .program-cards-2{
-      height: 100%;
 
+  @media (max-width: 500px) {
+    .program-cards-con-2 {
+      grid-template-columns: repeat(1, 0.9fr);
+    }
+    .program-cards-2 {
+      height: 100%;
     }
   }
   

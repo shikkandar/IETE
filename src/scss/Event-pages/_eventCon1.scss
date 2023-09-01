@@ -39,6 +39,11 @@
 }
 .event-btn{
    @include btn;
+   a{
+    color: #fff;
+    font-size: 0.8rem;
+    font-family: $primary-text ;
+   }
 }
 @media (max-width:1400px) {
     .Event-con1{

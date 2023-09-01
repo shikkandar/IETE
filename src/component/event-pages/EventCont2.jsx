@@ -25,7 +25,7 @@ export const EventCon2 = () => {
             <button className='btn-blue'><a target='_blank' href='http://ietechennai.in/assets/pdf/chencon2022_proceedings.pdf'>ChenCon 2022 Proceedings</a></button>
         </div>
         <div className="line"></div>
-        <img className='event-img' src="/img/bacgroung/chencon2022.jpeg" alt="img" data-aos='zoom-in-up' / >
+        <img className='event-img' src="/img/bacgroung/chencon2022.jpeg" alt="img"  / >
         <div className="line" data-aos='zoom-in-up'></div>
          <div className="event2-con1-scope" data-aos='zoom-in-up'>
        

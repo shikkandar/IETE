@@ -53,7 +53,7 @@ export const HomeSvg = () => {
           </div>
         </div>
       </div>
-      <img className='home-main-svg' src='/img/svg/undraw_work_chat_re_qes4.svg' alt='home-svg' data-aos="slide-left"/>
+      <img className='home-main-svg' src='/img/svg/undraw_work_chat_re_qes4.svg' alt='home-svg'/>
     </div>
   );
 };

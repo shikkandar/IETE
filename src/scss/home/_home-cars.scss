@@ -90,15 +90,18 @@
     .program-cards-con {
       grid-template-columns: repeat(1, 350px);
     }
-  }
-  @media (max-width: 350px) {
-    .program-cards-con {
-      grid-template-columns: repeat(1,90%);
-      
+    .program-cards {
+      width: 100%;
     }
-    .program-cards{
-      height: 100%;
+  }
 
+  @media (max-width: 500px) {
+    .program-cards-con {
+      grid-template-columns: repeat(1, 0.9fr);
+    }
+    .program-cards {
+      height: 100%;
     }
   }
+
   

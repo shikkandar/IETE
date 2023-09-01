@@ -154,12 +154,12 @@ body {
   .navbar label {
     display: initial;
   }
-  .navbar nav {
+  .navbar #nav {
     position: fixed;
     width: 100%;
     background: white;
     min-height: 100vh;
-    top: 200px;
+    top: 100px;
     left: -100%;
     text-align: center;
     transition: all 0.5s;
@@ -199,7 +199,7 @@ body {
   .header-img {
     height: 50px;
   }
-  .navbar nav {
+  .navbar #nav {
     top: 80px;
   }
 }
@@ -332,13 +332,13 @@ body {
     width: 90%;
   }
   .home-main .le-ld {
-    font-size: 8rem;
+    font-size: 7rem;
   }
   .home-main .le-ld-con {
     margin-top: 40px;
   }
   .home-main .le-ld-text1, .home-main .le-ld-text2 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     color: #001F4D;
   }
 }
@@ -627,10 +627,13 @@ body {
   .program-cards-con {
     grid-template-columns: repeat(1, 350px);
   }
+  .program-cards {
+    width: 100%;
+  }
 }
-@media (max-width: 350px) {
+@media (max-width: 500px) {
   .program-cards-con {
-    grid-template-columns: repeat(1, 90%);
+    grid-template-columns: repeat(1, 0.9fr);
   }
   .program-cards {
     height: 100%;

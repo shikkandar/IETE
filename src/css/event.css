@@ -54,6 +54,11 @@
   background: linear-gradient(117deg, rgb(13, 13, 184) 0%, rgb(9, 9, 106) 19%);
   color: #edebeb;
 }
+.event-btn a {
+  color: #fff;
+  font-size: 0.8rem;
+  font-family: "Belanosima", sans-serif;
+}
 
 @media (max-width: 1400px) {
   .Event-con1 {
@@ -231,7 +236,8 @@
 }
 .btn-blue a {
   font-size: 0.8rem;
-  color: aliceblue;
+  color: #fff;
+  font-family: "Belanosima", sans-serif;
 }
 
 .line {

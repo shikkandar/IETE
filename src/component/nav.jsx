@@ -37,21 +37,16 @@ useEffect(() => {
         navbar.classList.add("top");
       }
     };
-
+   
+   
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+
+     
   }, []);
-  const refreshPage = () => {
-    if (window.innerWidth < 1000) {
-      window.location.reload();
-    }
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth' // Adds smooth scrolling animation
-    });
-  };
+
  
   const [showIeteObb, setShowIeteObb] = useState(false);
 
@@ -62,7 +57,19 @@ useEffect(() => {
   const handleMouseLeave = () => {
     setShowIeteObb(false);
   };
+  
 
+  const refreshPage = () => {
+ 
+    if (window.innerWidth < 1000) {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+      window.location.reload();
+    }
+   
+  };
   return (
     <>
      

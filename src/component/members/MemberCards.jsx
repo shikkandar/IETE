@@ -42,8 +42,8 @@ export const MemberCards = () => {
                    Click here to learn more about the Eligibility Criteria and other details
             </div>
             <div className="mem-btn">
-                 <div className="mem-button">
-                     &gt;
+                 <div >
+                 <a className="mem-button" target='_blank' href='https://iete.org/index111.html'> &gt;</a>
                  </div>
             </div>
           </div>
@@ -65,8 +65,9 @@ export const MemberCards = () => {
                   Click here to learn more about the Eligibility Criteria and other details
             </div>
             <div className="mem-btn">
-                 <div className="mem-button">
-                     &gt;
+               
+                 <div>
+                    <a className="mem-button" target='_blank' href='https://iete.org/index111.html'> &gt;</a>
                  </div>
             </div>
           </div>
@@ -88,15 +89,15 @@ export const MemberCards = () => {
                Click on the link to access the forms:
             </div>
             <div className="mem-con">
-                  1.Corporate Member<br/>
+                  <a target='_blank' href='https://iete.org/IETE1_CORPUP.pdf'>1.Corporate Member</a><br/>
 
-                  2.Chartered Engineer<br/>
+                  <a target='_blank' href='https://iete.org/CE_Formup.pdf'>2.Chartered Engineer</a><br/>
 
-                  3.Organisational Member<br/>
+                  <a target='_blank' href='https://iete.org/orgmemup.pdf'></a>3.Organisational Member<br/>
 
-                  4.AMIETE<br/>
+                  <a target='_blank' href='https://iete.org/AMMEM.pdf'>4.AMIETE</a><br/>
 
-                  5.DIPIETE
+                  <a target='_blank' href='https://iete.org/DIPMEM.pdf'>5.DIPIETE</a>
             </div>
           </div>
           <svg className='round1' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9013fe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>

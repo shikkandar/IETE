@@ -67,7 +67,7 @@ useEffect(() => {
     <>
      
       <div className='navbar'>
-        <a href='/'><img className='header-img' src='/img/logo1.jpg' alt='builders-logo'  onMouseEnter={handleMouseEnter}
+        <a href='/'><img className='header-img' src='/img/logo1.png' alt='Iete-logo'  onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave} /></a>
        
         <input type="checkbox" id="menu-bar" />

@@ -18,6 +18,7 @@
         font-size: 12rem;
         color: $primary-text-color-hover;
         display: flex;
+        justify-content: center;
         &-con{
             margin-top: 40px;
         }
@@ -32,6 +33,7 @@
            &-text1{
             font-size: 3rem;
            }
+    
         }
         
         @media (max-width:1100px) {
@@ -43,26 +45,60 @@
         
     }
     &-svg{
-        width: 35%;
+        width: 40%;
         margin-top: 20px;
     }
     @media (max-width:1300px) {
         .le-ld{
             font-size: 9.5rem;
            }
-       
+           &-svg{
+            width: 40%;
+            margin-top: 20px;
+        }
     }
-    @media (max-width:1100px) {
+    @media (max-width:1200px) {
         .le-ld{
             font-size: 7rem;
            }
-       
     }
-    @media (max-width:900px) {
+    @media (max-width:1100px) {
         &-svg{
             width: 70%;
         }
-       
+        .le-ld{
+            font-size: 10rem;
+            &-con{
+                margin-top: 40px;
+            }
+            &-text1{
+                font-size: 3rem;
+                color: $primary-text-color
+            }
+           }
+        
+    }
+    @media (max-width:900px) {
+        &-svg{
+            width: 90%;
+        }
+        
+    }
+    @media (max-width:550px) {
+        &-svg{
+            width: 90%;
+        }
+        .le-ld{
+            font-size: 8rem;
+            &-con{
+                margin-top: 40px;
+            }
+            &-text1{
+                font-size: 2.2rem;
+                color: $primary-text-color
+            }
+           }
+        
     }
 }
 
@@ -99,6 +135,8 @@
        
         a{
             color: $primary-text-color;
+            font-family: $primary-text;
+            font-weight: 500;
         }
       
     }
@@ -113,29 +151,50 @@
 
 }
 
-@media (max-width:1100px) {
-   .up-text{
-    font-size: 1.5rem;
-   }
-   .webinar-text{
-    width: 400px;
-   }
+
+@media (max-width:1300px) {
+    .home-main{
+       column-gap: 10px;
+      }
 }
-@media (max-width:900px) {
+@media (max-width:1100px) {
  .home-main{
    flex-direction: column;
    justify-content: center;
    align-items: center;
    row-gap: 20px;
-   top: 15vh;
+   top: 8vh;
  }
+ .webinar-text{
+    width: 80%;
+   }
+ .up-text{
+    font-size: 2rem;
+    text-align: center;
+   }
  .webinar-text{
     &-event{
         a{
-            font-size: 0.8rem;
+            font-size: 1.2rem;
         }
     }
 }   
+}
+@media (max-width:600px) {
+ .webinar-text{
+    width: 90%;
+   } 
+   .up-text{
+    font-size: 1.3rem;
+    text-align: center;
+   } 
+   .webinar-text{
+    &-event{
+        a{
+            font-size: 0.7rem;
+        }
+    }
+}  
 }
 @media (max-width:450px) {
     .webinar-text{

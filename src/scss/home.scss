@@ -48,7 +48,7 @@
 @media (max-width:900px) {
     .blue{
         top: 35vh;
-        height: 65vh;
+        height: 75vh;
     }
     .home-svg{
         height: 65vh;
@@ -62,10 +62,16 @@
         }
     }
 }
-@media (max-width:450px) {
+@media (max-width:700px) {
+    .blue{
+        top: 35vh;
+        height: 65vh;
+    }
+}
+@media (max-width:500px) {
     .blue{
         top: 40vh;
-        height: 60vh;
+        height: 40vh;
     }
     .home-svg{
         height: 70vh;

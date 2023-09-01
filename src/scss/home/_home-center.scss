@@ -61,14 +61,12 @@
         &-text-content1{
             font-size: 1.2rem;
         }
+      
    }
 
    @media (max-width:1100px) {
         &-text{
             width: 90%;
-        }
-        .homecenter-con{
-            margin-top:200px ;
         }
    }
    @media (max-width:600px) {
@@ -89,21 +87,12 @@
     }
  
 }
-// @media (max-width:350px) {
-//     .homecenter-con{
-//         height: 400px;
-//         margin-top: 170px;
-//     }
-//     &-text-head{
-//         font-size: 0.7rem;
-//     }
-//     &-text-content{
-//         font-size: 0.3rem;
-//     }
-//     &-text-content1{
-//         font-size: 0.5rem;
-//     }
-// }
+}
+@media (max-width:1300px) {
+    .homecenter-con{
+        height: 1000px;
+        margin-top: 100px;
+    }
 }
 @media (max-width:900px) {
     .homecenter-con{
@@ -113,13 +102,13 @@
 }
 @media (max-width:700px) {
     .homecenter-con{
-        height: 400px;
+        height: 500px;
         margin-top: 30%;
     }
 }
 @media (max-width:500px) {
     .homecenter-con{
-        height: 400px;
+        height: 500px;
         margin-top: -2%;
     }
 }

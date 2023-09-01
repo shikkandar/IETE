@@ -142,9 +142,13 @@
   display: none;
   }
   @media (max-width: 1050px){
+    .iete-obb{
+      display: none;
+    }
     .navbar{
         padding: 20px;
       }
+     
       #nav {
         display: none;
       }

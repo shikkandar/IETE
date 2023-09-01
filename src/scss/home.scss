@@ -43,16 +43,14 @@
 @media (max-width:1300px) {
     .blue{
         top: 150px;
-        height: 600px;
+        height: 800px;
     }
     .home-svg{
         height: 800px ;
     }
 }
 @media (max-width:900px) {
-    .blue{
-        height: 600px;
-    }
+
     .home-svg{
         height: 600px;
     }
@@ -74,7 +72,7 @@
 @media (max-width:500px) {
     .blue{
         top: 150px;
-        height: 40vh;
+    
     }
     .home-svg{
         height: 70vh;

@@ -504,9 +504,6 @@ body {
   .homecenter-con-text {
     width: 90%;
   }
-  .homecenter-con .homecenter-con {
-    margin-top: 200px;
-  }
 }
 @media (max-width: 600px) {
   .homecenter-con-text-head {
@@ -526,6 +523,12 @@ body {
   }
 }
 
+@media (max-width: 1300px) {
+  .homecenter-con {
+    height: 1000px;
+    margin-top: 100px;
+  }
+}
 @media (max-width: 900px) {
   .homecenter-con {
     height: 600px;
@@ -534,13 +537,13 @@ body {
 }
 @media (max-width: 700px) {
   .homecenter-con {
-    height: 400px;
+    height: 500px;
     margin-top: 30%;
   }
 }
 @media (max-width: 500px) {
   .homecenter-con {
-    height: 400px;
+    height: 500px;
     margin-top: -2%;
   }
 }
@@ -680,16 +683,13 @@ body {
 @media (max-width: 1300px) {
   .blue {
     top: 150px;
-    height: 600px;
+    height: 800px;
   }
   .home-svg {
     height: 800px;
   }
 }
 @media (max-width: 900px) {
-  .blue {
-    height: 600px;
-  }
   .home-svg {
     height: 600px;
   }
@@ -710,7 +710,6 @@ body {
 @media (max-width: 500px) {
   .blue {
     top: 150px;
-    height: 40vh;
   }
   .home-svg {
     height: 70vh;

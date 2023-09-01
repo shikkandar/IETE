@@ -25,6 +25,9 @@ body {
   z-index: 9999;
   transform: rotate(180deg);
 }
+.iete-obb p {
+  transform: rotate(180deg);
+}
 
 .traiangle {
   position: absolute;
@@ -631,7 +634,7 @@ body {
     width: 100%;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 360px) {
   .program-cards-con {
     grid-template-columns: repeat(1, 0.9fr);
   }
@@ -645,9 +648,9 @@ body {
 
 .blue {
   position: absolute;
-  top: 20vh;
+  top: 100px;
   background-color: #001F4D;
-  height: 80vh;
+  height: 900px;
   width: 100%;
   z-index: -1;
 }
@@ -667,25 +670,28 @@ body {
 
 @media (max-width: 1600px) {
   .home-svg {
-    height: 60vh;
+    height: 600px;
     width: 100%;
+  }
+  .blue {
+    margin-top: 200px;
   }
 }
 @media (max-width: 1300px) {
   .blue {
-    top: 35vh;
+    top: 150px;
+    height: 600px;
   }
   .home-svg {
-    height: 65vh;
+    height: 800px;
   }
 }
 @media (max-width: 900px) {
   .blue {
-    top: 35vh;
-    height: 75vh;
+    height: 600px;
   }
   .home-svg {
-    height: 65vh;
+    height: 600px;
   }
   .scroll-to-top-button {
     right: 5%;
@@ -698,16 +704,24 @@ body {
 }
 @media (max-width: 700px) {
   .blue {
-    top: 35vh;
-    height: 65vh;
+    top: 150px;
   }
 }
 @media (max-width: 500px) {
   .blue {
-    top: 40vh;
+    top: 150px;
     height: 40vh;
   }
   .home-svg {
     height: 70vh;
+  }
+}
+@media (max-height: 700px) {
+  .blue {
+    top: 150px;
+    height: 40vh;
+  }
+  .home-svg {
+    height: 90vh;
   }
 }/*# sourceMappingURL=home.css.map */

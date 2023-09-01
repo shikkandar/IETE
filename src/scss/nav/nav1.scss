@@ -26,6 +26,9 @@
       border-radius: 10px;
       z-index: 9999;
       transform: rotate(180deg);
+      p{
+        transform: rotate(180deg);
+      }
   }
   
  .traiangle{

@@ -1,2 +1,11 @@
 @use '../members/membersMain';
 @use '../members/membersCards';
+.highlight{
+    color: transparent;
+    animation: type 0.07s ease-in-out  1 forwards ;
+}
+@keyframes type {
+    100%{
+        color: $primary-text-color;
+    }
+}

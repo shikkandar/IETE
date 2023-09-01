@@ -133,7 +133,7 @@ useEffect(() => {
       </div>
       {showIeteObb && (
           <div className="iete-obb">
-            The Institution of Electronics and Telecommunication Engineers, Chennai
+           <p>The Institution of Electronics and Telecommunication Engineers, Chennai</p> 
             <div className="traiangle">
             <div className="traiangle1"></div>
             </div>

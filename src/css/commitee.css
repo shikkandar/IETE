@@ -101,8 +101,11 @@
   .program-cards-2 {
     width: 100%;
   }
+  .commitee-text {
+    font-size: 1.8rem;
+  }
 }
-@media (max-width: 500px) {
+@media (max-width: 360px) {
   .program-cards-con-2 {
     grid-template-columns: repeat(1, 0.9fr);
   }

@@ -323,4 +323,8 @@
   .members-con1, .members-con2, .members-con3, .members-con4, .members-con-svg {
     width: 90%;
   }
+}
+.highlight {
+  color: transparent;
+  animation: type 0.07s ease-in-out 1 forwards;
 }/*# sourceMappingURL=members.css.map */

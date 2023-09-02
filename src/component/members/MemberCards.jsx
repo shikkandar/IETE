@@ -67,7 +67,7 @@ export const MemberCards = () => {
             <div className="mem-btn">
                
                  <div>
-                    <a  rel='noreferrer' className="mem-button" target='_blank' href='https://iete.org/index111.html'> &gt;</a>
+                    <a  rel='noreferrer' className="mem-button-1" target='_blank' href='https://iete.org/index111.html'> &gt;</a>
                  </div>
             </div>
           </div>

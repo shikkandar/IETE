@@ -140,7 +140,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: gray;
+            color: transparent;
             cursor: pointer;
             padding-bottom: 10%;
             padding-left: 5%;
@@ -148,7 +148,8 @@
             
         }
         .mem-button:hover{
-            color: #3e3d3d;
+            color: transparent
+            ;
         }
     }
     

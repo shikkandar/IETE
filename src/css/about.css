@@ -585,6 +585,8 @@
 
 .homes-icon-text {
   text-transform: capitalize;
+  font-size: 0.9rem;
+  color: rgb(7, 7, 85);
 }
 
 @media (max-width: 1200px) {

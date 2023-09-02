@@ -20,12 +20,12 @@ export const EventCon2 = () => {
              "International Conference on Power of Artificial Intelligence and Machine Learning for Human Empowerment"
         </div>
         <div className="btn-collection" >
-            <button className='btn-blue'><a target='_blank' href='http://ietechennai.in/assets/pdf/CHENCON2022.pdf'>Pdf Brochure</a></button>
-            <button className='btn-blue'><a target='_blank' href='http://ietechennai.in/assets/pdf/chencon_invitation.pdf'>Inaugural Session Programme</a></button>
-            <button className='btn-blue'><a target='_blank' href='http://ietechennai.in/assets/pdf/chencon2022_proceedings.pdf'>ChenCon 2022 Proceedings</a></button>
+            <button className='btn-blue'><a target='_blank' rel='noreferrer' href='http://ietechennai.in/assets/pdf/CHENCON2022.pdf'>Pdf Brochure</a></button>
+            <button className='btn-blue'><a target='_blank' rel='noreferrer' href='http://ietechennai.in/assets/pdf/chencon_invitation.pdf'>Inaugural Session Programme</a></button>
+            <button className='btn-blue'><a target='_blank' rel='noreferrer' href='http://ietechennai.in/assets/pdf/chencon2022_proceedings.pdf'>ChenCon 2022 Proceedings</a></button>
         </div>
         <div className="line"></div>
-        <img className='event-img' src="/img/bacgroung/chencon2022.jpeg" alt="img"  / >
+        <img className='event-img' src="/img/bacgroung/chencon2022.jpeg" alt="img"  data-aos='zoom-in-up' / >
         <div className="line" data-aos='zoom-in-up'></div>
          <div className="event2-con1-scope" data-aos='zoom-in-up'>
        

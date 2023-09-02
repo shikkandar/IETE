@@ -159,6 +159,7 @@ a {
   .footer-con {
     flex-direction: column;
     justify-content: start;
+    row-gap: 10px;
   }
   .footer-con .address-info:nth-child(2) {
     width: 281.28px;

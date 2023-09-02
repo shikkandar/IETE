@@ -105,7 +105,7 @@ useEffect(() => {
                       <NavLink to='/Chencon'>2022</NavLink>
                     </li>
                     <li>
-                      <NavLink to='http://ietechennai.in/assets/pdf/chencon2021_proceedings.pdf'>2021</NavLink>
+                      <a  target='_blank' rel='noreferrer' href='http://ietechennai.in/assets/pdf/chencon2021_proceedings.pdf'>2021</a>
                     </li>
                  </ul>
               </li>
@@ -113,13 +113,13 @@ useEffect(() => {
                 <Link id='navLinks' to='#'>Newsletter</Link>
                 <ul class="Comitee">
                     <li style={{borderTop:"none" }} onClick={refreshPage}>
-                      <NavLink to='http://ietechennai.in/assets/pdf/chenlink1_3.pdf'>Vol. 1,No 3</NavLink>
+                      <a target='_blank' rel='noreferrer' href='http://ietechennai.in/assets/pdf/chenlink1_3.pdf'>Vol. 1,No 3</a>
                     </li>
                     <li style={{borderTop:"none" }}>
-                      <NavLink to='http://ietechennai.in/assets/pdf/chenlink1_2.pdf'>Vol. 1,No 2</NavLink>
+                      <a target='_blank' rel='noreferrer' href='http://ietechennai.in/assets/pdf/chenlink1_2.pdf'>Vol. 1,No 2</a>
                     </li>
                     <li style={{borderTop:"none" }}>
-                      <NavLink to='http://ietechennai.in/assets/pdf/chenlink1_1.pdf'>Vol. 1,No 1</NavLink>
+                      <a target='_blank' rel='noreferrer' href='http://ietechennai.in/assets/pdf/chenlink1_1.pdf'>Vol. 1,No 1</a>
                     </li>
                     
                  </ul>

@@ -55,27 +55,27 @@ export const AboutNum = () => {
 
   return (
     <div>
-      <div className="num-card-con-2" data-aos='slide-up' ref={countdownContainerRef}>
+      <div className="num-card-con-2"  ref={countdownContainerRef}>
         <div className="num-card num-card-2">
-          <div className="num-con">
-            <div className="number-field-3" id="number7">
+          <div className="num-con" data-aos='zoom-in-up'>
+            <div className="number-field-3"  id="number7">
               0
             </div>
             <div className="num-text2">Students</div>
           </div>
-          <div className="num-con">
+          <div className="num-con" data-aos='zoom-in-up'>
             <div className="number-field-3" id="number8">
               0
             </div>
             <div className="num-text2">Staff</div>
           </div>
-          <div className="num-con">
+          <div className="num-con" data-aos='zoom-in-up'>
             <div className="number-field-3" id="number9">
               0
             </div>
             <div className="num-text2">Events</div>
           </div>
-          <div className="num-con">
+          <div className="num-con" data-aos='zoom-in-up'>
             <div className="number-field-3" id="number10">
               0
             </div>

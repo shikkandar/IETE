@@ -5,11 +5,11 @@
     background-repeat: no-repeat;
     background-size:150% 100%;
     height: 700px;
-    margin-top: 220px;
     z-index: -2;
     align-items: center;
     justify-content: center;
     display: flex;
+    margin-top: 30px;
     &-text{ 
         width: 40%;
         border-radius: 10px;
@@ -91,24 +91,20 @@
 @media (max-width:1300px) {
     .homecenter-con{
         height: 1000px;
-        margin-top: 100px;
     }
 }
 @media (max-width:900px) {
     .homecenter-con{
         height: 600px;
-        margin-top: 300px;
     }
 }
 @media (max-width:700px) {
     .homecenter-con{
         height: 500px;
-        margin-top: 30%;
     }
 }
 @media (max-width:500px) {
     .homecenter-con{
         height: 500px;
-        margin-top: -2%;
     }
 }

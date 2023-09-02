@@ -507,6 +507,11 @@
   .about-center-2 {
     width: 95%;
   }
+  .about-center-c {
+    text-indent: 20px;
+    text-align: justify;
+    line-height: 22px;
+  }
 }
 @media (max-width: 600px) {
   .about-center {

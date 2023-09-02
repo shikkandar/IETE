@@ -6,19 +6,6 @@
 @use "./home/home-cars" as *;
 
 
-.home-svg{
-    z-index: 1;
-  
-}
-.blue{
-    position: absolute;
-    top: 100px;
-    background-color: #001F4D;
-    height: 900px;
-    width: 100%;
-    z-index: -1;
-
-}
 .scroll-to-top-button{
     position: fixed;
     top: 91%;
@@ -31,59 +18,14 @@
         height: 50px;
     }
   }
-@media (max-width:1600px) {
-    .home-svg{
-        height: 600px;
-        width: 100%;
-    }
-    .blue{
-        margin-top: 200px;
-    }
-}
-@media (max-width:1300px) {
-    .blue{
-        top: 150px;
-        height: 800px;
-    }
-    .home-svg{
-        height: 800px ;
-    }
-}
-@media (max-width:900px) {
 
-    .home-svg{
-        height: 600px;
-    }
+@media (max-width:900px) {
     .scroll-to-top-button{
         right: 5%;
-        top: 95%;
+        top: 93%;
         svg{
             width: 35px;
             height: 35px;
         }
-    }
-}
-@media (max-width:700px) {
-    .blue{
-        top: 150px;
-       
-    }
-}
-@media (max-width:500px) {
-    .blue{
-        top: 150px;
-    
-    }
-    .home-svg{
-        height: 70vh;
-    }
-}
-@media (max-height:700px) {
-    .blue{
-        top: 150px;
-        height: 40vh;
-    }
-    .home-svg{
-        height: 90vh;
     }
 }

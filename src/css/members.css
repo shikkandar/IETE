@@ -291,7 +291,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: gray;
+  color: #F50057;
+  cursor: pointer;
+  padding-bottom: 10%;
+  padding-left: 5%;
+  font-size: 3rem;
+}
+.members-con .mem-btn .mem-button-1 {
+  background-color: #ECF9F0;
+  width: 50px;
+  border-radius: 50%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F9A826;
   cursor: pointer;
   padding-bottom: 10%;
   padding-left: 5%;
